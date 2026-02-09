@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#measure-theoretic-probability" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -377,6 +382,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    测度与事件
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -394,6 +419,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么我们需要测度论？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 为什么我们需要测度论？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-omega-mathcalf-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 概率空间的三要素 \((\Omega, \mathcal{F}, P)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 随机变量的本质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Python 模拟：大数定律的可视化
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -906,6 +1000,66 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 为什么我们需要测度论？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 为什么我们需要测度论？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-omega-mathcalf-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 概率空间的三要素 \((\Omega, \mathcal{F}, P)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 随机变量的本质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Python 模拟：大数定律的可视化
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -922,52 +1076,63 @@
 
 
 
-  <h1>测度与事件</h1>
-
-<p># 测度论视角下的概率基础 (Measure-Theoretic Probability)</p>
-<p>## 1. 为什么我们需要测度论？</p>
-<p>在初等概率论中，我们往往假设样本空间 <span class="arithmatex">\(\\Omega\)</span> 是有限的或可数的。但在量化金融（如布朗运动、随机微积分）中，我们需要处理连续时间与无限维空间。此时，传统的概率定义会失效，必须引入**柯尔莫哥洛夫公理体系**。</p>
-<p>### 1.1 概率空间的三要素 <span class="arithmatex">\((\\Omega, \\mathcal{F}, P)\)</span></p>
+<h1 id="measure-theoretic-probability">测度论视角下的概率基础 (Measure-Theoretic Probability)</h1>
+<h2 id="1">1. 为什么我们需要测度论？</h2>
+<p>在初等概率论中，我们往往假设样本空间 <span class="arithmatex">\(\Omega\)</span> 是有限的或可数的。但在量化金融（如布朗运动、随机微积分）中，我们需要处理连续时间与无限维空间。此时，传统的概率定义会失效，必须引入<strong>柯尔莫哥洛夫公理体系</strong>。</p>
+<h3 id="11-omega-mathcalf-p">1.1 概率空间的三要素 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span></h3>
 <p>一个严谨的概率模型由三个部分组成：</p>
-<p>1.  **样本空间 (Sample Space, <span class="arithmatex">\(\\Omega\)</span>)**：所有可能结果的集合。</p>
-<p>2.  **<span class="arithmatex">\(\\sigma\)</span>-代数 (Event Space, <span class="arithmatex">\(\\mathcal{F}\)</span>)**：所有“可测量”事件的集合。它必须满足：</p>
-<p>&nbsp;   - <span class="arithmatex">\(\\Omega \\in \\mathcal{F}\)</span></p>
-<p>&nbsp;   - 若 <span class="arithmatex">\(A \\in \\mathcal{F}\)</span>，则 <span class="arithmatex">\(A^c \\in \\mathcal{F}\)</span> （对补集封闭）</p>
-<p>&nbsp;   - 若 <span class="arithmatex">\(A\_1, A\_2, ... \\in \\mathcal{F}\)</span>，则 <span class="arithmatex">\(\\bigcup\_{i=1}^{\\infty} A\_i \\in \\mathcal{F}\)</span> （对可列并封闭）</p>
-<p>3.  **概率测度 (Probability Measure, <span class="arithmatex">\(P\)</span>)**：将事件映射到 <span class="arithmatex">\(\[0, 1]\)</span> 的函数，满足 <span class="arithmatex">\(P(\\Omega)=1\)</span> 且具有**可列可加性**。</p>
+<ol>
+<li><strong>样本空间 (Sample Space, <span class="arithmatex">\(\Omega\)</span>)</strong>：所有可能结果的集合。</li>
+<li><strong><span class="arithmatex">\(\sigma\)</span>-代数 (Event Space, <span class="arithmatex">\(\mathcal{F}\)</span>)</strong>：所有“可测量”事件的集合。它必须满足三个条件：<ul>
+<li><span class="arithmatex">\(\Omega \in \mathcal{F}\)</span> （全集在其中）</li>
+<li>若 <span class="arithmatex">\(A \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(A^c \in \mathcal{F}\)</span> （对补集封闭）</li>
+<li>若 <span class="arithmatex">\(A_1, A_2, ... \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}\)</span> （对可列并封闭）</li>
+</ul>
+</li>
+<li><strong>概率测度 (Probability Measure, <span class="arithmatex">\(P\)</span>)</strong>：将事件映射到 <span class="arithmatex">\([0, 1]\)</span> 的函数，满足 <span class="arithmatex">\(P(\Omega)=1\)</span> 且具有<strong>可列可加性</strong>（<span class="arithmatex">\(\sigma\)</span>-additivity）。</li>
+</ol>
 <blockquote>
-<p>**考点**：</p>
-<p>“为什么我们需要 <span class="arithmatex">\(\\sigma\)</span>-代数，而不是直接对 <span class="arithmatex">\(\\Omega\)</span> 的所有子集定义概率？”</p>
-<p>**回答**：因为在不可数空间（如实数轴）上，存在“不可测集”（如维塔利集合）。如果对所有子集定义概率，会导致矛盾。<span class="arithmatex">\(\\sigma\)</span>-代数帮我们剔除了那些无法定义概率的“怪异集合”。</p>
+<p><strong>💡 考点</strong></p>
+<p><strong>Q:</strong> 为什么我们需要 <span class="arithmatex">\(\sigma\)</span>-代数，而不是直接对 <span class="arithmatex">\(\Omega\)</span> 的所有子集定义概率？</p>
+<p><strong>A:</strong> 因为在不可数空间（如实数轴）上，存在“不可测集”（如维塔利集合）。如果强行对所有子集定义概率，会导致数学上的矛盾。<span class="arithmatex">\(\sigma\)</span>-代数帮我们剔除了那些无法定义概率的“怪异集合”，保证了概率论的相容性。</p>
 </blockquote>
-<p>## 2. 随机变量的本质</p>
-<p>随机变量 <span class="arithmatex">\(X\)</span> 并不是一个“变量”，而是一个**可测函数 (Measurable Function)**：</p>
+<hr />
+<h2 id="2">2. 随机变量的本质</h2>
+<p>随机变量 <span class="arithmatex">\(X\)</span> 并不是一个“变量”，而是一个<strong>可测函数 (Measurable Function)</strong>：</p>
 <div class="arithmatex">\[
 X: \Omega \rightarrow \mathbb{R}
 \]</div>
-<p>它将抽象的样本点 <span class="arithmatex">\(\\omega\)</span> 映射为实数 <span class="arithmatex">\(x\)</span>。</p>
-<p>**定义**：对于任意实数 <span class="arithmatex">\(x\)</span>，集合 <span class="arithmatex">\(\\{\\omega \\in \\Omega: X(\\omega) \\leq x\\}\)</span> 必须属于 <span class="arithmatex">\(\\sigma\)</span>-代数 <span class="arithmatex">\(\\mathcal{F}\)</span>。这保证了我们可以计算 <span class="arithmatex">\(P(X \\leq x)\)</span>。</p>
-<p>## 3. Python 模拟：理解“几乎处处收敛”</p>
-<p>虽然测度论很抽象，但我们可以用代码模拟其极限行为。</p>
-<p>```python</p>
-<p>import numpy as np</p>
-<p>import matplotlib.pyplot as plt</p>
-<p># 模拟：大数定律的收敛过程</p>
+<p>它将抽象的样本点 <span class="arithmatex">\(\omega\)</span> 映射为实数 <span class="arithmatex">\(x\)</span>。</p>
+<p><strong>定义</strong>：对于任意实数 <span class="arithmatex">\(x\)</span>，集合 <span class="arithmatex">\(\{\omega \in \Omega : X(\omega) \leq x\}\)</span> 必须属于 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{F}\)</span>。</p>
+<div class="arithmatex">\[
+X^{-1}((-\infty, x]) \in \mathcal{F}, \quad \forall x \in \mathbb{R}
+\]</div>
+<p>这保证了我们可以计算 <span class="arithmatex">\(P(X \leq x)\)</span>，即累积分布函数 (CDF) 是存在的。</p>
+<hr />
+<h2 id="3-python">3. Python 模拟：大数定律的可视化</h2>
+<p>虽然测度论很抽象，但我们可以用代码模拟其极限行为，观察样本均值如何“依概率收敛”到数学期望。</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="_1">设置随机种子，保证结果可复现</h1>
 <p>np.random.seed(42)</p>
-<p>n_samples = 1000</p>
-<p># 抛硬币：+1 或 -1</p>
-<p>coin_flips = np.random.choice([-1, 1], size=n_samples)</p>
-<p># 计算累积均值</p>
+<h1 id="_2">参数设置</h1>
+<p>n_samples = 1000  # 投掷次数
+p = 0.5           # 硬币正面的概率</p>
+<h1 id="1-1-0">模拟抛硬币：1代表正面，-1代表反面 (期望为0)</h1>
+<p>coin_flips = np.random.choice([-1, 1], size=n_samples, p=[1-p, p])</p>
+<h1 id="cumulative-mean">计算累积均值 (Cumulative Mean)</h1>
 <p>cumulative_means = np.cumsum(coin_flips) / np.arange(1, n_samples + 1)</p>
-<p>plt.figure(figsize=(10, 6))</p>
-<p>plt.plot(cumulative_means, label='Sample Mean')</p>
-<p>plt.axhline(0, color='r', linestyle='--', label='True Expectation (0)')</p>
-<p>plt.title('Convergence of Sample Mean to Expectation (LLN)')</p>
-<p>plt.xlabel('Number of Trials')</p>
-<p>plt.ylabel('Average Value')</p>
-<p>plt.legend()</p>
-<p>plt.grid(True)</p>
-<p>plt.show()</p>
+<h1 id="_3">绘图</h1>
+<p>plt.figure(figsize=(10, 6))
+plt.plot(cumulative_means, label='Sample Mean (样本均值)', color='blue')
+plt.axhline(0, color='red', linestyle='--', label='True Expectation (真实期望 0)')</p>
+<p>plt.title('Law of Large Numbers Simulation (大数定律模拟)')
+plt.xlabel('Number of Trials (试验次数)')
+plt.ylabel('Average Value (均值)')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()</p>
 
 
 
