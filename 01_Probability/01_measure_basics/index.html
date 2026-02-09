@@ -474,17 +474,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Python 模拟：大数定律的可视化
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1048,17 +1037,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Python 模拟：大数定律的可视化
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1109,30 +1087,6 @@ X^{-1}((-\infty, x]) \in \mathcal{F}, \quad \forall x \in \mathbb{R}
 \]</div>
 <p>这保证了我们可以计算 <span class="arithmatex">\(P(X \leq x)\)</span>，即累积分布函数 (CDF) 是存在的。</p>
 <hr />
-<h2 id="3-python">3. Python 模拟：大数定律的可视化</h2>
-<p>虽然测度论很抽象，但我们可以用代码模拟其极限行为，观察样本均值如何“依概率收敛”到数学期望。</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="_1">设置随机种子，保证结果可复现</h1>
-<p>np.random.seed(42)</p>
-<h1 id="_2">参数设置</h1>
-<p>n_samples = 1000  # 投掷次数
-p = 0.5           # 硬币正面的概率</p>
-<h1 id="1-1-0">模拟抛硬币：1代表正面，-1代表反面 (期望为0)</h1>
-<p>coin_flips = np.random.choice([-1, 1], size=n_samples, p=[1-p, p])</p>
-<h1 id="cumulative-mean">计算累积均值 (Cumulative Mean)</h1>
-<p>cumulative_means = np.cumsum(coin_flips) / np.arange(1, n_samples + 1)</p>
-<h1 id="_3">绘图</h1>
-<p>plt.figure(figsize=(10, 6))
-plt.plot(cumulative_means, label='Sample Mean (样本均值)', color='blue')
-plt.axhline(0, color='red', linestyle='--', label='True Expectation (真实期望 0)')</p>
-<p>plt.title('Law of Large Numbers Simulation (大数定律模拟)')
-plt.xlabel('Number of Trials (试验次数)')
-plt.ylabel('Average Value (均值)')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()</p>
 
 
 
