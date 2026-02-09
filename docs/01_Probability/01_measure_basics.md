@@ -43,9 +43,7 @@
 
 
 $$
-
-X: \\Omega \\rightarrow \\mathbb{R}
-
+X: \Omega \rightarrow \mathbb{R}
 $$
 
 
