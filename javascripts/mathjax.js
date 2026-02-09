@@ -6,7 +6,7 @@ window.MathJax = {
     processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
+    ignoreHtmlClass: "tex2jax_ignore", // 只有明确标记忽略的才不翻译
     processHtmlClass: "arithmatex"
   }
 };
