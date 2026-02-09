@@ -936,15 +936,15 @@
 <p>&nbsp;   - 若 <span class="arithmatex">\(A\_1, A\_2, ... \\in \\mathcal{F}\)</span>，则 <span class="arithmatex">\(\\bigcup\_{i=1}^{\\infty} A\_i \\in \\mathcal{F}\)</span> （对可列并封闭）</p>
 <p>3.  **概率测度 (Probability Measure, <span class="arithmatex">\(P\)</span>)**：将事件映射到 <span class="arithmatex">\(\[0, 1]\)</span> 的函数，满足 <span class="arithmatex">\(P(\\Omega)=1\)</span> 且具有**可列可加性**。</p>
 <blockquote>
-<p>**量化面试考点**：</p>
-<p>面试官常问：“为什么我们需要 <span class="arithmatex">\(\\sigma\)</span>-代数，而不是直接对 <span class="arithmatex">\(\\Omega\)</span> 的所有子集定义概率？”</p>
+<p>**考点**：</p>
+<p>“为什么我们需要 <span class="arithmatex">\(\\sigma\)</span>-代数，而不是直接对 <span class="arithmatex">\(\\Omega\)</span> 的所有子集定义概率？”</p>
 <p>**回答**：因为在不可数空间（如实数轴）上，存在“不可测集”（如维塔利集合）。如果对所有子集定义概率，会导致矛盾。<span class="arithmatex">\(\\sigma\)</span>-代数帮我们剔除了那些无法定义概率的“怪异集合”。</p>
 </blockquote>
 <p>## 2. 随机变量的本质</p>
 <p>随机变量 <span class="arithmatex">\(X\)</span> 并不是一个“变量”，而是一个**可测函数 (Measurable Function)**：</p>
-<p>$$</p>
-<p>X: \Omega \rightarrow \mathbb{R}</p>
-<p>$$</p>
+<div class="arithmatex">\[
+X: \Omega \rightarrow \mathbb{R}
+\]</div>
 <p>它将抽象的样本点 <span class="arithmatex">\(\\omega\)</span> 映射为实数 <span class="arithmatex">\(x\)</span>。</p>
 <p>**定义**：对于任意实数 <span class="arithmatex">\(x\)</span>，集合 <span class="arithmatex">\(\\{\\omega \\in \\Omega: X(\\omega) \\leq x\\}\)</span> 必须属于 <span class="arithmatex">\(\\sigma\)</span>-代数 <span class="arithmatex">\(\\mathcal{F}\)</span>。这保证了我们可以计算 <span class="arithmatex">\(P(X \\leq x)\)</span>。</p>
 <p>## 3. Python 模拟：理解“几乎处处收敛”</p>
