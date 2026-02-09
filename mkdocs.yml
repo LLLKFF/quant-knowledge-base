@@ -1,0 +1,47 @@
+site_name: 概率统计学习笔记
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+  palette: 
+    scheme: default # 默认浅色模式
+    primary: teal   # 主题色：青色
+    accent: purple  # 强调色：紫色
+
+# 目录结构（我们之前规划好的）
+nav:
+  - 首页: index.md
+  - 概率论基础:
+    - 测度与事件: 01_Probability/01_measure_basics.md
+    - 随机变量与分布: 01_Probability/02_random_variables.md
+    - 数字特征与矩: 01_Probability/03_numerical_chars.md
+    - 独立性专题: 01_Probability/04_independence.md
+    - 极限定理与收敛: 01_Probability/05_limit_theorems.md
+  - 数理统计推断:
+    - 抽样分布: 02_Math_Statistics/01_sampling_dist.md
+    - 参数估计(点): 02_Math_Statistics/02_point_estimation.md
+    - 参数估计(区间): 02_Math_Statistics/03_interval_estimation.md
+    - 估计量评价(UMVUE): 02_Math_Statistics/04_evaluation.md
+    - 假设检验理论: 02_Math_Statistics/05_hypothesis_test.md
+  - 回归分析与计量:
+    - 简单线性回归: 03_Regression_Analysis/01_simple_linear.md
+    - 多元回归(矩阵): 03_Regression_Analysis/02_multiple_linear.md
+    - 模型诊断(违背假设): 03_Regression_Analysis/03_diagnostics.md
+    - 内生性与GMM: 03_Regression_Analysis/04_endogeneity.md
+
+# 支持 LaTeX 数学公式
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
