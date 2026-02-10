@@ -9,8 +9,6 @@
       
       
       
-        <link rel="prev" href="../..">
-      
       
       
         
@@ -21,7 +19,7 @@
     
     
       
-        <title>测度与事件 - 概率统计学习笔记</title>
+        <title>第一章：概率论的基本概念 (Basic Concepts) - 概率统计学习笔记</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#measure-theoretic-probability" class="md-skip">
+        <a href="#basic-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              测度与事件
+              第一章：概率论的基本概念 (Basic Concepts)
             
           </span>
         </div>
@@ -194,13 +192,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../01_measure_basics.md" class="md-tabs__link">
           
   
   
@@ -316,31 +312,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -358,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -373,37 +364,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    测度与事件
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01_measure_basics.md" class="md-nav__link">
         
   
   
@@ -419,65 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 为什么我们需要测度论？
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 为什么我们需要测度论？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-omega-mathcalf-p" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 概率空间的三要素 \((\Omega, \mathcal{F}, P)\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 随机变量的本质
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -999,22 +904,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 为什么我们需要测度论？
+        1.1 样本空间与随机事件
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 为什么我们需要测度论？">
+    <nav class="md-nav" aria-label="1.1 样本空间与随机事件">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-omega-mathcalf-p" class="md-nav__link">
+  <a href="#111" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 概率空间的三要素 \((\Omega, \mathcal{F}, P)\)
+        1.1.1 随机现象：从确定性到不确定性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2 样本空间：上帝的视角
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3 事件的关系与运算规律
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4 事件域：赋予集合以“长度”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5 事件的独立性
       
     </span>
   </a>
@@ -1023,17 +972,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 随机变量的本质
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1054,39 +992,68 @@
 
 
 
-<h1 id="measure-theoretic-probability">测度论视角下的概率基础 (Measure-Theoretic Probability)</h1>
-<h2 id="1">1. 为什么我们需要测度论？</h2>
-<p>在初等概率论中，我们往往假设样本空间 <span class="arithmatex">\(\Omega\)</span> 是有限的或可数的。但在量化金融（如布朗运动、随机微积分）中，我们需要处理连续时间与无限维空间。此时，传统的概率定义会失效，必须引入<strong>柯尔莫哥洛夫公理体系</strong>。</p>
-<h3 id="11-omega-mathcalf-p">1.1 概率空间的三要素 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span></h3>
-<p>一个严谨的概率模型由三个部分组成：</p>
-<ol>
-<li><strong>样本空间 (Sample Space, <span class="arithmatex">\(\Omega\)</span>)</strong>：所有可能结果的集合。</li>
-<li><strong><span class="arithmatex">\(\sigma\)</span>-代数 (Event Space, <span class="arithmatex">\(\mathcal{F}\)</span>)</strong>：所有“可测量”事件的集合。它必须满足三个条件：<ul>
-<li><span class="arithmatex">\(\Omega \in \mathcal{F}\)</span> （全集在其中）</li>
-<li>若 <span class="arithmatex">\(A \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(A^c \in \mathcal{F}\)</span> （对补集封闭）</li>
-<li>若 <span class="arithmatex">\(A_1, A_2, ... \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}\)</span> （对可列并封闭）</li>
-</ul>
-</li>
-<li><strong>概率测度 (Probability Measure, <span class="arithmatex">\(P\)</span>)</strong>：将事件映射到 <span class="arithmatex">\([0, 1]\)</span> 的函数，满足 <span class="arithmatex">\(P(\Omega)=1\)</span> 且具有<strong>可列可加性</strong>（<span class="arithmatex">\(\sigma\)</span>-additivity）。</li>
-</ol>
+<h1 id="basic-concepts">第一章：概率论的基本概念 (Basic Concepts)</h1>
 <blockquote>
-<p><strong>💡 考点</strong></p>
-<p><strong>Q:</strong> 为什么我们需要 <span class="arithmatex">\(\sigma\)</span>-代数，而不是直接对 <span class="arithmatex">\(\Omega\)</span> 的所有子集定义概率？</p>
-<p><strong>A:</strong> 因为在不可数空间（如实数轴）上，存在“不可测集”（如维塔利集合）。如果强行对所有子集定义概率，会导致数学上的矛盾。<span class="arithmatex">\(\sigma\)</span>-代数帮我们剔除了那些无法定义概率的“怪异集合”，保证了概率论的相容性。</p>
+<p><strong>核心摘要</strong>：本章我们将从零构建概率论的语言体系。我们将不再满足于高中阶段“抛硬币算次数”的直观理解，而是引入<strong>集合论</strong>和<strong>测度论</strong>的工具，严格定义什么叫“随机”，什么叫“事件”，以及它们之间如何运算。这套语言是后续所有统计推断和随机过程的基石。</p>
 </blockquote>
-<hr />
-<h2 id="2">2. 随机变量的本质</h2>
-<p>随机变量 <span class="arithmatex">\(X\)</span> 并不是一个“变量”，而是一个<strong>可测函数 (Measurable Function)</strong>：</p>
-<div class="arithmatex">\[
-X: \Omega \rightarrow \mathbb{R}
-\]</div>
-<p>它将抽象的样本点 <span class="arithmatex">\(\omega\)</span> 映射为实数 <span class="arithmatex">\(x\)</span>。</p>
-<p><strong>定义</strong>：对于任意实数 <span class="arithmatex">\(x\)</span>，集合 <span class="arithmatex">\(\{\omega \in \Omega : X(\omega) \leq x\}\)</span> 必须属于 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{F}\)</span>。</p>
-<div class="arithmatex">\[
-X^{-1}((-\infty, x]) \in \mathcal{F}, \quad \forall x \in \mathbb{R}
-\]</div>
-<p>这保证了我们可以计算 <span class="arithmatex">\(P(X \leq x)\)</span>，即累积分布函数 (CDF) 是存在的。</p>
-<hr />
+<h2 id="11">1.1 样本空间与随机事件</h2>
+<h3 id="111">1.1.1 随机现象：从确定性到不确定性</h3>
+<p>在物理学的经典力学时代，人们认为只要知道了初始状态和运动方程，未来的世界就是确定的，这叫做<strong>确定性现象</strong>（Deterministic Phenomena）。但在金融市场、微观粒子运动或者生物遗传中，我们发现即便在基本条件完全相同的情况下，每次试验的结果依然可能不同。这种在个别试验中呈现不确定性，但在大量重复试验中又呈现出统计规律性的现象，就是我们研究的对象——<strong>随机现象</strong>（Random Phenomena）。</p>
+<p>为了研究这种现象，我们需要对它进行观测，这就引入了<strong>随机试验</strong>（Random Experiment，通常记为 <span class="arithmatex">\(E\)</span>）的概念。在我看来，一个严格的随机试验必须同时满足三个特点：第一，它是<strong>可重复</strong>的，我们可以在相同条件下重复进行；第二，它是<strong>可预知</strong>的，虽然不知道下一次具体出什么，但我们知道所有可能的结果范围；第三，它是<strong>随机</strong>的，每次试验前的结果都无法准确预测。</p>
+<p>举个例子，我们在量化交易中测试一个动量策略，虽然我不知道下一笔交易是赚是赔，但我知道结果无非是“盈利”、“亏损”或“持平”，且长期来看它有一个胜率，这就是典型的随机试验。</p>
+<h3 id="112">1.1.2 样本空间：上帝的视角</h3>
+<p>当我们把随机试验的所有可能结果都罗列出来，汇聚成一个集合，这个集合就叫做<strong>样本空间</strong>（Sample Space），通常用希腊字母 <span class="arithmatex">\(\Omega\)</span> 表示。 <span class="arithmatex">\(\Omega\)</span> 中的每一个最基本的元素 <span class="arithmatex">\(\omega\)</span> 被称为<strong>样本点</strong>。</p>
+<p>在这里我们需要引入一点测度论的视角。<strong>随机事件</strong>（Random Event）并不是样本点本身，而是样本空间的<strong>子集</strong>。
+* <strong>基本事件</strong>：只包含一个样本点的子集，例如 <span class="arithmatex">\(\{\omega\}\)</span>。
+* <strong>必然事件</strong>：包含了所有样本点的集合，即 <span class="arithmatex">\(\Omega\)</span> 本身。因为每次试验结果必然在 <span class="arithmatex">\(\Omega\)</span> 中，所以它发生的概率是 1。
+* <strong>不可能事件</strong>：不包含任何样本点的集合，即空集 <span class="arithmatex">\(\varnothing\)</span>。它发生的概率是 0。</p>
+<p>我特别想强调的是，样本空间 <span class="arithmatex">\(\Omega\)</span> 的构造是主观的，取决于我们关心的“分辨率”。比如研究股票，如果我们只关心涨跌，那么 <span class="arithmatex">\(\Omega = \{涨, 跌\}\)</span>；如果我们关心具体价格，那么 <span class="arithmatex">\(\Omega\)</span> 就是全体正实数 <span class="arithmatex">\(\mathbb{R}^+\)</span>。</p>
+<h3 id="113">1.1.3 事件的关系与运算规律</h3>
+<p>既然事件是样本空间 <span class="arithmatex">\(\Omega\)</span> 的子集，那么讨论事件的关系，本质上就是在讨论集合论（Set Theory）。我们假设 <span class="arithmatex">\(\Omega\)</span> 已经给定，用 <span class="arithmatex">\(A, B, C\)</span> 等大写字母表示一系列事件。</p>
+<p><strong>包含关系 (<span class="arithmatex">\(A \subset B\)</span>)</strong>
+如果事件 <span class="arithmatex">\(A\)</span> 发生，必然导致事件 <span class="arithmatex">\(B\)</span> 发生，我们就说 <span class="arithmatex">\(A\)</span> 包含于 <span class="arithmatex">\(B\)</span>。从集合角度看，就是 <span class="arithmatex">\(A\)</span> 的所有样本点都在 <span class="arithmatex">\(B\)</span> 里面。比如在期权里，“行权价高于 100” 这个事件发生，必然意味着 “行权价高于 90” 这个事件发生。</p>
+<p><strong>并运算 (<span class="arithmatex">\(A \cup B\)</span>)</strong>
+这代表“至少有一个发生”。对于无穷多个事件 <span class="arithmatex">\(A_1, A_2, ...\)</span> 的并 <span class="arithmatex">\(\bigcup_{n=1}^{\infty} A_n\)</span>，它表示这无穷多个事件中，只要有一个发生，整体就发生。</p>
+<p><strong>交运算 (<span class="arithmatex">\(A \cap B\)</span> 或 <span class="arithmatex">\(AB\)</span>)</strong>
+这代表“同时发生”。同样，对于无穷多个事件的交 <span class="arithmatex">\(\bigcap_{n=1}^{\infty} A_n\)</span>，意味着这无穷多个事件必须全部同时发生。</p>
+<p><strong>差运算 (<span class="arithmatex">\(A - B\)</span>)</strong>
+这表示 <span class="arithmatex">\(A\)</span> 发生且 <span class="arithmatex">\(B\)</span> 不发生。在集合上，就是从 <span class="arithmatex">\(A\)</span> 中挖去属于 <span class="arithmatex">\(B\)</span> 的那部分。</p>
+<p><strong>互斥与对立 (关键考点)</strong>
+这是最容易混淆的概念。
+* <strong>互斥 (Mutually Exclusive)</strong>：指 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 不能同时发生，即 <span class="arithmatex">\(A \cap B = \varnothing\)</span>。比如“涨”和“跌”就是互斥的。
+* <strong>对立 (Complementary)</strong>：也叫逆事件，记为 <span class="arithmatex">\(\bar{A}\)</span> 或 <span class="arithmatex">\(A^c\)</span>。它不仅要求 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 互斥，还要求它们加起来等于全集，即 <span class="arithmatex">\(A \cup B = \Omega\)</span> 且 <span class="arithmatex">\(A \cap B = \varnothing\)</span>。
+* <strong>结论</strong>：对立事件一定互斥，但互斥事件不一定对立。比如掷骰子，“出1”和“出2”是互斥的，但它们不是对立的（因为还有3,4,5,6）。</p>
+<p><strong>运算律</strong>
+事件的运算完全遵循集合论的定律，包括交换律、结合律和分配律。其中最有用的是<strong>德·摩根律 (De Morgan's Laws)</strong>，它在计算复杂概率（特别是“至少”或“都不”类问题）时是神器：
+$$
+\overline{A \cup B} = \bar{A} \cap \bar{B} \quad (\text{两者都不发生 = 至少一个发生的对立})
+$$
+$$
+\overline{A \cap B} = \bar{A} \cup \bar{B} \quad (\text{至少一个不发生 = 两者同时发生的对立})
+$$
+这个定律可以推广到可列无穷多个事件的情况，形式完全一致。</p>
+<h3 id="114">1.1.4 事件域：赋予集合以“长度”</h3>
+<p>在有限样本空间中，我们可以对任意子集定义概率。但在连续样本空间（比如实数轴）中，情况变得复杂了。我们需要构建一个<strong>事件域</strong>（Field of Events）。</p>
+<p><strong>(1) <span class="arithmatex">\(\sigma\)</span>-代数与可测空间</strong>
+如果 <span class="arithmatex">\(\Omega\)</span> 的子集族 <span class="arithmatex">\(\mathcal{F}\)</span> 满足三个条件：全集 <span class="arithmatex">\(\Omega \in \mathcal{F}\)</span>；对补集运算封闭；对可列并运算封闭。那么我们就称 <span class="arithmatex">\(\mathcal{F}\)</span> 是一个 <strong><span class="arithmatex">\(\sigma\)</span>-代数</strong>（Sigma-Algebra）。
+此时，配对 <span class="arithmatex">\((\Omega, \mathcal{F})\)</span> 被称为<strong>可测空间</strong>。<span class="arithmatex">\(\mathcal{F}\)</span> 中的元素被称为<strong>可测集</strong>，也就是我们有资格谈论其概率的“事件”。</p>
+<p>在实数轴上，最常用的事件域是<strong>博雷尔 <span class="arithmatex">\(\sigma\)</span>-代数</strong>（Borel <span class="arithmatex">\(\sigma\)</span>-algebra），记为 <span class="arithmatex">\(\mathcal{B}\)</span>。它是由所有开区间 <span class="arithmatex">\((a, b)\)</span> 生成的最小 <span class="arithmatex">\(\sigma\)</span>-代数。这意味着，只要我们能度量开区间的长度，我们就能度量实轴上几乎所有奇怪集合的长度。</p>
+<p><strong>(2) 样本空间的分割 (Partition)</strong>
+这是一个在全概率公式中会用到的重要概念。如果一组事件 <span class="arithmatex">\(B_1, B_2, ...\)</span> 满足两个条件：第一，它们两两互斥（<span class="arithmatex">\(B_i B_j = \varnothing, i \ne j\)</span>）；第二，它们的并集是全集（<span class="arithmatex">\(\bigcup B_i = \Omega\)</span>）。那么这组事件就构成了样本空间的一个<strong>分割</strong>（也叫完备事件组）。
+直观来说，就像切蛋糕一样，把 <span class="arithmatex">\(\Omega\)</span> 切成了若干块，一块也不少，一块也不重叠。</p>
+<h3 id="115">1.1.5 事件的独立性</h3>
+<p>独立性是概率论区别于测度论的独特灵魂。</p>
+<p><strong>(1) 两个事件的独立性</strong>
+定义非常简洁：如果 <span class="arithmatex">\(P(AB) = P(A)P(B)\)</span>，则称事件 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 相互独立。
+现实意义是，事件 <span class="arithmatex">\(A\)</span> 的发生与否，不会改变事件 <span class="arithmatex">\(B\)</span> 发生的概率（即 <span class="arithmatex">\(P(B|A) = P(B)\)</span>）。在金融中，我们常假设今天的股价收益率与昨天的收益率是独立的（虽然这通常是弱式有效市场假说）。</p>
+<p><strong>(2) 多个事件的独立性 (高频坑点)</strong>
+对于三个事件 <span class="arithmatex">\(A, B, C\)</span>，要称它们<strong>相互独立</strong>，必须同时满足四个条件：
+1.  <span class="arithmatex">\(P(AB) = P(A)P(B)\)</span>
+2.  <span class="arithmatex">\(P(AC) = P(A)P(C)\)</span>
+3.  <span class="arithmatex">\(P(BC) = P(B)P(C)\)</span>
+4.  <span class="arithmatex">\(P(ABC) = P(A)P(B)P(C)\)</span></p>
+<p>前三个条件叫<strong>两两独立</strong>。
+<strong>请注意</strong>：两两独立<strong>推不出</strong>相互独立。有可能 <span class="arithmatex">\(A, B\)</span> 独立，<span class="arithmatex">\(B, C\)</span> 独立，<span class="arithmatex">\(A, C\)</span> 独立，但 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 同时发生这就完全决定了 <span class="arithmatex">\(C\)</span> 的结果（导致不满足第4条）。</p>
 
 
 
