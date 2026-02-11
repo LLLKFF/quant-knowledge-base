@@ -12,6 +12,8 @@
         <link rel="prev" href="../..">
       
       
+        <link rel="next" href="../02_random_variables/">
+      
       
         
       
@@ -523,7 +525,7 @@
   <a href="#121" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.1 绪论：从赌桌到数学大厦的基石
+        1.2.1 绪论
       
     </span>
   </a>
@@ -545,7 +547,7 @@
   <a href="#123" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.3 概率的公理化定义：从直觉到测度论的飞跃
+        1.2.3 概率的公理化定义：从直觉到测度论
       
     </span>
   </a>
@@ -650,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_random_variables.md" class="md-nav__link">
+      <a href="../02_random_variables/" class="md-nav__link">
         
   
   
@@ -1246,7 +1248,7 @@
   <a href="#121" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.1 绪论：从赌桌到数学大厦的基石
+        1.2.1 绪论
       
     </span>
   </a>
@@ -1268,7 +1270,7 @@
   <a href="#123" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.3 概率的公理化定义：从直觉到测度论的飞跃
+        1.2.3 概率的公理化定义：从直觉到测度论
       
     </span>
   </a>
@@ -1437,7 +1439,7 @@ $$
 <p>前三个条件叫<strong>两两独立</strong>。
 <strong>请注意</strong>：两两独立<strong>推不出</strong>相互独立。有可能 <span class="arithmatex">\(A, B\)</span> 独立，<span class="arithmatex">\(B, C\)</span> 独立，<span class="arithmatex">\(A, C\)</span> 独立，但 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 同时发生这就完全决定了 <span class="arithmatex">\(C\)</span> 的结果（导致不满足第4条）。</p>
 <h2 id="12">1.2 概率的定义及确定方法</h2>
-<h3 id="121">1.2.1 绪论：从赌桌到数学大厦的基石</h3>
+<h3 id="121">1.2.1 绪论</h3>
 <p>在深入那些冰冷的数学公理之前，我觉得有必要先聊聊我们对“概率”最原始的直觉。</p>
 <p>概率论是数学家族里最“叛逆”的一个分支。其他的数学分支（比如代数、几何）都在研究“确定性”，告诉我们 <span class="arithmatex">\(1+1\)</span> 必然等于 <span class="arithmatex">\(2\)</span>，三角形内角和必然是 <span class="arithmatex">\(180^\circ\)</span>。但概率论一上来就告诉我们：<strong>“下一次发生什么，我不知道。”</strong></p>
 <p>然而，这种“不知道”背后，却隐藏着一种更高级的“知道”。这就是<strong>概率（Probability）</strong>——它是对随机事件发生可能性大小的度量。</p>
@@ -1474,7 +1476,7 @@ $$
 <p>这一结论的数学本质，其实是概率论中极其深刻的<strong>“测度变换”</strong>（Girsanov Theorem）——虽然在现实世界（物理测度 <span class="arithmatex">\(P\)</span>）中股票是有风险的，但在一个假想的数学世界（风险中性测度 <span class="arithmatex">\(Q\)</span>）里，所有资产的预期收益率都可以被拉平。这一发现彻底改变了华尔街，交易员们从此放下了水晶球，拿起了计算器。公理化概率论的威力一旦被释放，便再也无法收回。</p>
 <p>先是爱德华·索普（Edward Thorp），这位利用概率论在“21点”赌桌上大杀四方的数学教授，将战场转移到了权证市场，建立了人类历史上第一家量化对冲基金，证明了战胜市场依靠的不是运气而是数学期望。紧接着，几何学家吉姆·西蒙斯（Jim Simons）创立了文艺复兴科技，他雇佣了大量的物理学家、统计学家，却不要任何懂金融的人。他们利用隐马尔可夫模型（HMM）等高级概率工具，在看似杂乱无章的市场噪音中挖掘微弱的统计规律，旗下的大奖章基金创造了年化 66% 的收益神话。</p>
 <p>这一路走来，我们可以清晰地看到一条逻辑链条：柯尔莫哥洛夫的公理化 <span class="arithmatex">\(\rightarrow\)</span> 随机过程与伊藤微积分 <span class="arithmatex">\(\rightarrow\)</span> Black-Scholes 公式 <span class="arithmatex">\(\rightarrow\)</span> 现代量化交易。我们今天要从最枯燥的 <span class="arithmatex">\(\sigma\)</span>-代数和测度论开始学起，并非为了应付考试，而是因为它们正是那把能点石成金的、开启现代量化金融大门的唯一钥匙。</p>
-<h3 id="123">1.2.3 概率的公理化定义：从直觉到测度论的飞跃</h3>
+<h3 id="123">1.2.3 概率的公理化定义：从直觉到测度论</h3>
 <p>在历史回顾中，我们看到古典概型和几何概型最终都倒在了“无限”和“悖论”的脚下。1933 年，柯尔莫哥洛夫引入了测度论，彻底重构了概率论的底层逻辑。</p>
 <p>这一节比较抽象，但请耐下心来。因为如果不理解这里的“<span class="arithmatex">\(\sigma\)</span>-代数”和“R-N 定理”，未来学习金融随机分析（Stochastic Calculus）时，会在“风险中性测度变换”那里卡住。</p>
 <p><strong>1. 概率空间的三位一体 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span></strong></p>
@@ -1539,6 +1541,73 @@ $$
 * <strong>下连续</strong>：若 <span class="arithmatex">\(A_n \uparrow A\)</span>（即 <span class="arithmatex">\(A_1 \subset A_2 \subset ...\)</span> 且 <span class="arithmatex">\(\cup A_n = A\)</span>），则 <span class="arithmatex">\(\lim_{n \to \infty} P(A_n) = P(A)\)</span>。
 * <strong>上连续</strong>：若 <span class="arithmatex">\(A_n \downarrow A\)</span>（即 <span class="arithmatex">\(A_1 \supset A_2 \supset ...\)</span> 且 <span class="arithmatex">\(\cap A_n = A\)</span>），则 <span class="arithmatex">\(\lim_{n \to \infty} P(A_n) = P(A)\)</span>。
 * <em>直觉</em>：如果你用一系列越来越精确的事件去逼近一个目标事件，那么概率值也会连贯地逼近过去。</p>
+<p>概率的连续性是柯尔莫哥洛夫第三公理（可列可加性）的直接推论，也是证明大数定律和后续极限定理的核心工具。在考试中，常要求<strong>“叙述并证明概率的下连续性”</strong>。</p>
+<p><strong>定理表述</strong>：
+1.  <strong>下连续性 (Continuity from Below)</strong>：
+    若事件序列 <span class="arithmatex">\(\{A_n\}\)</span> 单调不减（即 <span class="arithmatex">\(A_1 \subset A_2 \subset \dots\)</span>），且 <span class="arithmatex">\(A = \bigcup_{n=1}^{\infty} A_n\)</span>（记为 <span class="arithmatex">\(A_n \uparrow A\)</span>），则：
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$</p>
+<ol>
+<li><strong>上连续性 (Continuity from Above)</strong>：
+    若事件序列 <span class="arithmatex">\(\{A_n\}\)</span> 单调不增（即 <span class="arithmatex">\(A_1 \supset A_2 \supset \dots\)</span>），且 <span class="arithmatex">\(A = \bigcap_{n=1}^{\infty} A_n\)</span>（记为 <span class="arithmatex">\(A_n \downarrow A\)</span>），则：
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$</li>
+</ol>
+<p><strong>证明过程 (Proof)</strong>：</p>
+<p>我们首先证明<strong>下连续性</strong>，利用的技巧是<strong>“切片法” (Disjointification)</strong>，即把嵌套的集合切分成互不相交的圆环。</p>
+<p><strong>第一步：构造互不相交序列</strong>
+令 <span class="arithmatex">\(B_1 = A_1\)</span>，对于 <span class="arithmatex">\(n \ge 2\)</span>，定义 <span class="arithmatex">\(B_n = A_n - A_{n-1} = A_n \cap A_{n-1}^c\)</span>。
+显然，<span class="arithmatex">\(\{B_n\}\)</span> 满足以下性质：
+1.  <strong>互不相交</strong>：<span class="arithmatex">\(B_i \cap B_j = \varnothing \quad (i \ne j)\)</span>。
+2.  <strong>有限并集还原</strong>：<span class="arithmatex">\(\bigcup_{k=1}^n B_k = A_n\)</span>。
+3.  <strong>无限并集还原</strong>：<span class="arithmatex">\(\bigcup_{k=1}^{\infty} B_k = \bigcup_{n=1}^{\infty} A_n = A\)</span>。</p>
+<p><strong>第二步：利用公理 3 (可列可加性)</strong>
+由于 <span class="arithmatex">\(B_k\)</span> 互不相交，且它们的并集是 <span class="arithmatex">\(A\)</span>，根据公理 3：
+$$
+P(A) = P\left( \bigcup_{k=1}^{\infty} B_k \right) = \sum_{k=1}^{\infty} P(B_k)
+$$</p>
+<p><strong>第三步：利用级数定义取极限</strong>
+根据无穷级数的定义（部分和的极限）：
+$$
+\sum_{k=1}^{\infty} P(B_k) = \lim_{n \to \infty} \sum_{k=1}^{n} P(B_k)
+$$</p>
+<p><strong>第四步：利用有限可加性还原</strong>
+因为 <span class="arithmatex">\(B_1, \dots, B_n\)</span> 是互不相交的，根据有限可加性：
+$$
+\sum_{k=1}^{n} P(B_k) = P\left( \bigcup_{k=1}^{n} B_k \right) = P(A_n)
+$$</p>
+<p><strong>结论</strong>：
+$$
+P(A) = \lim_{n \to \infty} P(A_n)
+$$
+<strong>下连续性得证。</strong> <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><strong>证明：上连续性</strong></p>
+<p>利用德·摩根律 (De Morgan's Laws) 将“递减序列”转化为“递增序列”，从而利用上述结论。</p>
+<ol>
+<li>设 <span class="arithmatex">\(A_n \downarrow A\)</span>。考虑其补集序列 <span class="arithmatex">\(\{A_n^c\}\)</span>。</li>
+<li>因为 <span class="arithmatex">\(A_n\)</span> 递减，所以补集 <span class="arithmatex">\(A_n^c\)</span> 递增：<span class="arithmatex">\(A_1^c \subset A_2^c \subset \dots\)</span>。</li>
+<li>根据德·摩根律，其极限集合为：
+    $$
+    \bigcup_{n=1}^{\infty} A_n^c = \left( \bigcap_{n=1}^{\infty} A_n \right)^c = A^c
+    $$</li>
+<li>对序列 <span class="arithmatex">\(\{A_n^c\}\)</span> 应用下连续性定理：
+    $$
+    \lim_{n \to \infty} P(A_n^c) = P(A^c)
+    $$</li>
+<li>代入 <span class="arithmatex">\(P(A^c) = 1 - P(A)\)</span>：
+    $$
+    \lim_{n \to \infty} (1 - P(A_n)) = 1 - P(A)
+    $$
+    $$
+    1 - \lim_{n \to \infty} P(A_n) = 1 - P(A)
+    $$
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$
+<strong>上连续性得证。</strong> <span class="arithmatex">\(\blacksquare\)</span></li>
+</ol>
 <p><strong>(3) 绝对连续性与 Radon-Nikodym 定理</strong>
 这是连接“初等概率”与“高等概率”的桥梁。
 很多初学者认为 <span class="arithmatex">\(P(A) = \int_A f(x)dx\)</span> 是天经地义的。但伊藤清告诉我们：<strong>这并不是理所当然的，它需要满足极其苛刻的条件。</strong></p>

@@ -9,26 +9,26 @@
       
       
       
+        <link rel="prev" href="../01_basic_concepts/">
       
-        <link rel="next" href="01_Probability/01_basic_concepts/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>概率统计学习笔记</title>
+        <title>随机变量与分布 - 概率统计学习笔记</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,7 +47,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#quant-research-knowledge-base" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +79,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="概率统计学习笔记" class="md-header__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
+    <a href="../.." title="概率统计学习笔记" class="md-header__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              首页
+              随机变量与分布
             
           </span>
         </div>
@@ -175,11 +170,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -196,11 +189,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="01_Probability/01_basic_concepts/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01_basic_concepts/" class="md-tabs__link">
           
   
   
@@ -220,7 +215,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="02_Math_Statistics/01_sampling_dist.md" class="md-tabs__link">
+        <a href="../../02_Math_Statistics/01_sampling_dist.md" class="md-tabs__link">
           
   
   
@@ -240,7 +235,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03_Regression_Analysis/01_simple_linear.md" class="md-tabs__link">
+        <a href="../../03_Regression_Analysis/01_simple_linear.md" class="md-tabs__link">
           
   
   
@@ -274,7 +269,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="概率统计学习笔记" class="md-nav__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
+    <a href="../.." title="概率统计学习笔记" class="md-nav__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -289,37 +284,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    首页
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -335,59 +303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#knowledge-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🗺️ 知识图谱 (Knowledge Architecture)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ 工具链 (The Stack)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📅 当前进度 (Status)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -396,26 +311,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -433,7 +353,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -451,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Probability/01_basic_concepts/" class="md-nav__link">
+      <a href="../01_basic_concepts/" class="md-nav__link">
         
   
   
@@ -476,10 +396,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="01_Probability/02_random_variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -495,6 +422,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -507,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Probability/03_numerical_chars.md" class="md-nav__link">
+      <a href="../03_numerical_chars.md" class="md-nav__link">
         
   
   
@@ -535,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Probability/04_independence.md" class="md-nav__link">
+      <a href="../04_independence.md" class="md-nav__link">
         
   
   
@@ -563,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_Probability/05_limit_theorems.md" class="md-nav__link">
+      <a href="../05_limit_theorems.md" class="md-nav__link">
         
   
   
@@ -650,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_Math_Statistics/01_sampling_dist.md" class="md-nav__link">
+      <a href="../../02_Math_Statistics/01_sampling_dist.md" class="md-nav__link">
         
   
   
@@ -678,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_Math_Statistics/02_point_estimation.md" class="md-nav__link">
+      <a href="../../02_Math_Statistics/02_point_estimation.md" class="md-nav__link">
         
   
   
@@ -706,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_Math_Statistics/03_interval_estimation.md" class="md-nav__link">
+      <a href="../../02_Math_Statistics/03_interval_estimation.md" class="md-nav__link">
         
   
   
@@ -734,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_Math_Statistics/04_evaluation.md" class="md-nav__link">
+      <a href="../../02_Math_Statistics/04_evaluation.md" class="md-nav__link">
         
   
   
@@ -762,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_Math_Statistics/05_hypothesis_test.md" class="md-nav__link">
+      <a href="../../02_Math_Statistics/05_hypothesis_test.md" class="md-nav__link">
         
   
   
@@ -849,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_Regression_Analysis/01_simple_linear.md" class="md-nav__link">
+      <a href="../../03_Regression_Analysis/01_simple_linear.md" class="md-nav__link">
         
   
   
@@ -877,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_Regression_Analysis/02_multiple_linear.md" class="md-nav__link">
+      <a href="../../03_Regression_Analysis/02_multiple_linear.md" class="md-nav__link">
         
   
   
@@ -905,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_Regression_Analysis/03_diagnostics.md" class="md-nav__link">
+      <a href="../../03_Regression_Analysis/03_diagnostics.md" class="md-nav__link">
         
   
   
@@ -933,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_Regression_Analysis/04_endogeneity.md" class="md-nav__link">
+      <a href="../../03_Regression_Analysis/04_endogeneity.md" class="md-nav__link">
         
   
   
@@ -978,49 +906,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#knowledge-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🗺️ 知识图谱 (Knowledge Architecture)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ 工具链 (The Stack)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📅 当前进度 (Status)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1037,84 +922,9 @@
 
 
 
-<h1 id="quant-research-knowledge-base">Quant Research Knowledge Base</h1>
-<p>!!! quote "Philosophy"
-    <strong>"Probability is the logic of science."</strong> — E. T. Jaynes</p>
-<div class="highlight"><pre><span></span><code>这是一个基于 **Docs as Code** 理念构建的个人量化研究知识库。旨在将数理统计、随机过程与金融工程的理论体系，与 Python 量化实战代码深度融合，为博士入学考试及未来的量化职业生涯打下坚实的数理基础。
-</code></pre></div>
-<hr />
-<h2 id="knowledge-architecture">🗺️ 知识图谱 (Knowledge Architecture)</h2>
-<p>本项目采用模块化结构，目前规划的核心板块如下：</p>
-<ul>
-<li>:material-function: <strong><a href="01_Probability/01_basic_concepts/">概率论与测度 (Probability &amp; Measure)</a></strong><ul>
-<li>从柯尔莫哥洛夫公理体系出发，深入理解测度、可测函数与随机变量本质。</li>
-<li>涵盖大数定律、中心极限定理及各类收敛性的严格证明。</li>
-</ul>
-</li>
-<li>:material-chart-bell-curve: <strong>数理统计推断 (Statistical Inference)</strong> <em>(Construction)</em><ul>
-<li>参数估计（MLE/矩估计）、假设检验（N-P引理）、贝叶斯推断。</li>
-<li>线性模型与广义线性模型 (GLM)。</li>
-</ul>
-</li>
-<li>:material-finance: <strong>金融随机分析 (Stochastic Calculus)</strong> <em>(Planned)</em><ul>
-<li>布朗运动、伊藤引理 (Itô's Lemma)、Girsanov 定理。</li>
-<li>鞅理论 (Martingales) 与无套利定价原理。</li>
-</ul>
-</li>
-<li>:material-code-json: <strong>量化实战与算法 (Quant &amp; Coding)</strong> <em>(Planned)</em><ul>
-<li>Python 数据分析 (Pandas/Numpy)、机器学习算法实现。</li>
-<li>常见量化策略回测与绩效分析。</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="the-stack">🛠️ 工具链 (The Stack)</h2>
-<p>本知识库的构建依赖于现代化的工程工具，不仅仅是记笔记，更是对工程能力的训练：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">组件</th>
-<th style="text-align: left;">作用</th>
-<th style="text-align: left;">核心价值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>VS Code</strong></td>
-<td style="text-align: left;">编辑器</td>
-<td style="text-align: left;">统一的代码与文档编写环境，支持 Jupyter 交互</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Git / GitHub</strong></td>
-<td style="text-align: left;">版本控制</td>
-<td style="text-align: left;">追踪每一次思维迭代，实现“知识的时光机”</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>MkDocs</strong></td>
-<td style="text-align: left;">渲染引擎</td>
-<td style="text-align: left;">将 Markdown 实时编译为现代化的静态网站</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>LaTeX</strong></td>
-<td style="text-align: left;">数学排版</td>
-<td style="text-align: left;">呈现 <span class="arithmatex">\(\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}\)</span> 等复杂公式</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="status">📅 当前进度 (Status)</h2>
-<p>!!! abstract "2026年2月 - 冲刺阶段"
-    目前正在集中攻克 <strong>概率论基础</strong> 模块。</p>
-<div class="highlight"><pre><span></span><code>* [x] **测度论基础与公理化定义** :material-check:
-* [x] **概率论发展简史与金融应用** :material-check:
-* [ ] **随机变量及其分布** (In Progress) :material-clock-outline:
-* [ ] **多维随机变量与变换** (Todo)
-* [ ] **大数定律与极限定理** (Todo)
-</code></pre></div>
-<hr />
-<div style="text-align: center;">
-    <a href="01_Probability/01_basic_concepts/" class="md-button md-button--primary">开始学习：概率论的基本概念</a>
-</div>
+  <h1>随机变量与分布</h1>
+
+
 
 
 
@@ -1164,12 +974,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
