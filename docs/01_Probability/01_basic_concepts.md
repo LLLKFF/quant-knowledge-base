@@ -90,7 +90,7 @@ $$
 
 ## 1.2 概率的定义及确定方法
 
-### 1.2.1 绪论：从赌桌到数学大厦的基石
+### 1.2.1 绪论
 
 在深入那些冰冷的数学公理之前，我觉得有必要先聊聊我们对“概率”最原始的直觉。
 
@@ -164,7 +164,7 @@ $$
 
 这一路走来，我们可以清晰地看到一条逻辑链条：柯尔莫哥洛夫的公理化 $\rightarrow$ 随机过程与伊藤微积分 $\rightarrow$ Black-Scholes 公式 $\rightarrow$ 现代量化交易。我们今天要从最枯燥的 $\sigma$-代数和测度论开始学起，并非为了应付考试，而是因为它们正是那把能点石成金的、开启现代量化金融大门的唯一钥匙。
 
-### 1.2.3 概率的公理化定义：从直觉到测度论的飞跃
+### 1.2.3 概率的公理化定义：从直觉到测度论
 
 在历史回顾中，我们看到古典概型和几何概型最终都倒在了“无限”和“悖论”的脚下。1933 年，柯尔莫哥洛夫引入了测度论，彻底重构了概率论的底层逻辑。
 
@@ -225,6 +225,88 @@ $$
 * **下连续**：若 $A_n \uparrow A$（即 $A_1 \subset A_2 \subset ...$ 且 $\cup A_n = A$），则 $\lim_{n \to \infty} P(A_n) = P(A)$。
 * **上连续**：若 $A_n \downarrow A$（即 $A_1 \supset A_2 \supset ...$ 且 $\cap A_n = A$），则 $\lim_{n \to \infty} P(A_n) = P(A)$。
 * *直觉*：如果你用一系列越来越精确的事件去逼近一个目标事件，那么概率值也会连贯地逼近过去。
+
+概率的连续性是柯尔莫哥洛夫第三公理（可列可加性）的直接推论，也是证明大数定律和后续极限定理的核心工具。在考试中，常要求**“叙述并证明概率的下连续性”**。
+
+**定理表述**：
+1.  **下连续性 (Continuity from Below)**：
+    若事件序列 $\{A_n\}$ 单调不减（即 $A_1 \subset A_2 \subset \dots$），且 $A = \bigcup_{n=1}^{\infty} A_n$（记为 $A_n \uparrow A$），则：
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$
+
+2.  **上连续性 (Continuity from Above)**：
+    若事件序列 $\{A_n\}$ 单调不增（即 $A_1 \supset A_2 \supset \dots$），且 $A = \bigcap_{n=1}^{\infty} A_n$（记为 $A_n \downarrow A$），则：
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$
+
+
+
+**证明过程 (Proof)**：
+
+我们首先证明**下连续性**，利用的技巧是**“切片法” (Disjointification)**，即把嵌套的集合切分成互不相交的圆环。
+
+
+
+**第一步：构造互不相交序列**
+令 $B_1 = A_1$，对于 $n \ge 2$，定义 $B_n = A_n - A_{n-1} = A_n \cap A_{n-1}^c$。
+显然，$\{B_n\}$ 满足以下性质：
+1.  **互不相交**：$B_i \cap B_j = \varnothing \quad (i \ne j)$。
+2.  **有限并集还原**：$\bigcup_{k=1}^n B_k = A_n$。
+3.  **无限并集还原**：$\bigcup_{k=1}^{\infty} B_k = \bigcup_{n=1}^{\infty} A_n = A$。
+
+**第二步：利用公理 3 (可列可加性)**
+由于 $B_k$ 互不相交，且它们的并集是 $A$，根据公理 3：
+$$
+P(A) = P\left( \bigcup_{k=1}^{\infty} B_k \right) = \sum_{k=1}^{\infty} P(B_k)
+$$
+
+**第三步：利用级数定义取极限**
+根据无穷级数的定义（部分和的极限）：
+$$
+\sum_{k=1}^{\infty} P(B_k) = \lim_{n \to \infty} \sum_{k=1}^{n} P(B_k)
+$$
+
+**第四步：利用有限可加性还原**
+因为 $B_1, \dots, B_n$ 是互不相交的，根据有限可加性：
+$$
+\sum_{k=1}^{n} P(B_k) = P\left( \bigcup_{k=1}^{n} B_k \right) = P(A_n)
+$$
+
+**结论**：
+$$
+P(A) = \lim_{n \to \infty} P(A_n)
+$$
+**下连续性得证。** $\blacksquare$
+
+
+**证明：上连续性**
+
+利用德·摩根律 (De Morgan's Laws) 将“递减序列”转化为“递增序列”，从而利用上述结论。
+
+1.  设 $A_n \downarrow A$。考虑其补集序列 $\{A_n^c\}$。
+2.  因为 $A_n$ 递减，所以补集 $A_n^c$ 递增：$A_1^c \subset A_2^c \subset \dots$。
+3.  根据德·摩根律，其极限集合为：
+    $$
+    \bigcup_{n=1}^{\infty} A_n^c = \left( \bigcap_{n=1}^{\infty} A_n \right)^c = A^c
+    $$
+4.  对序列 $\{A_n^c\}$ 应用下连续性定理：
+    $$
+    \lim_{n \to \infty} P(A_n^c) = P(A^c)
+    $$
+5.  代入 $P(A^c) = 1 - P(A)$：
+    $$
+    \lim_{n \to \infty} (1 - P(A_n)) = 1 - P(A)
+    $$
+    $$
+    1 - \lim_{n \to \infty} P(A_n) = 1 - P(A)
+    $$
+    $$
+    \lim_{n \to \infty} P(A_n) = P(A)
+    $$
+**上连续性得证。** $\blacksquare$
+
 
 **(3) 绝对连续性与 Radon-Nikodym 定理**
 这是连接“初等概率”与“高等概率”的桥梁。
