@@ -19,7 +19,7 @@
     
     
       
-        <title>第二章：随机变量及其分布 (Random Variables & Distributions) - 概率统计学习笔记</title>
+        <title>第三章：多维随机变量及其分布 - 概率统计学习笔记</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#random-variables-distributions" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第二章：随机变量及其分布 (Random Variables &amp; Distributions)
+              第三章：多维随机变量及其分布
             
           </span>
         </div>
@@ -904,33 +904,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        前言：为什么要引入随机变量？
+        3.1 多维随机变量及其联合分布
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 随机变量的基本概念
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.1 随机变量的基本概念">
+    <nav class="md-nav" aria-label="3.1 多维随机变量及其联合分布">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#211-definition-of-random-variables" class="md-nav__link">
+  <a href="#311-random-vectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1.1 随机变量的定义 (Definition of Random Variables)
+        3.1.1 多维随机变量 (Random Vectors)
       
     </span>
   </a>
@@ -938,10 +927,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#212-cumulative-distribution-function-cdf" class="md-nav__link">
+  <a href="#312-joint-cdf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1.2 随机变量的分布函数 (Cumulative Distribution Function, CDF)
+        3.1.2 联合分布函数 (Joint CDF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-joint-pmf-discrete-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 联合分布列 (Joint PMF - Discrete Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-joint-pdf-continuous-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 联合密度函数 (Joint PDF - Continuous Case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-common-multivariate-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5 常用多维分布 (Common Multivariate Distributions)
       
     </span>
   </a>
@@ -954,22 +976,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 随机变量的类型与常见分布
+        3.2 边缘分布与随机变量的独立性
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2 随机变量的类型与常见分布">
+    <nav class="md-nav" aria-label="3.2 边缘分布与随机变量的独立性">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#221-discrete-rvs" class="md-nav__link">
+  <a href="#321-marginal-cdf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.1 离散型随机变量及其分布律 (Discrete RVs)
+        3.2.1 边缘分布函数 (Marginal CDF)
       
     </span>
   </a>
@@ -977,50 +999,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#222-continuous-rvs" class="md-nav__link">
+  <a href="#322-marginal-pmf-discrete" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.2 连续型随机变量及其概率密度函数 (Continuous RVs)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 随机变量的数字特征
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3 随机变量的数字特征">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#231-mathematical-expectation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.1 数学期望 (Mathematical Expectation)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3.1 数学期望 (Mathematical Expectation)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 概念起源：分赌本问题
+        3.2.2 边缘分布列 (Marginal PMF - Discrete)
       
     </span>
   </a>
@@ -1028,10 +1010,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#323-marginal-pdf-continuous" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 定义与物理意义
+        3.2.3 边缘密度函数 (Marginal PDF - Continuous)
       
     </span>
   </a>
@@ -1039,148 +1021,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#324-independence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 重要性质
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#232-variance-standard-deviation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.2 方差与标准差 (Variance &amp; Standard Deviation)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3.2 方差与标准差 (Variance &amp; Standard Deviation)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 定义与公式
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 物理与现实意义
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 重要性质
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-chebyshevs-inequality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 切比雪夫不等式 (Chebyshev's Inequality)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#233" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.3 协方差、相关系数与矩
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3.3 协方差、相关系数与矩">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-covariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 协方差 (Covariance)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-correlation-coefficient" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 相关系数 (Correlation Coefficient)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-moments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 矩 (Moments)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#234" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.4 其他特征：偏度、峰度与分位数
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#235" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.5 常见随机变量的期望与方差汇总
+        3.2.4 随机变量间的独立性 (Independence)
       
     </span>
   </a>
@@ -1209,400 +1053,266 @@
 
 
 
-<h1 id="random-variables-distributions">第二章：随机变量及其分布 (Random Variables &amp; Distributions)</h1>
-<h2 id="_1">前言：为什么要引入随机变量？</h2>
-<p>在第一章中，我们处理的样本空间 <span class="arithmatex">\(\Omega\)</span> 往往是具体的、非数值的。比如：
-* 扔硬币：<span class="arithmatex">\(\Omega = \{ \text{Head}, \text{Tail} \}\)</span>
-* 抽扑克：<span class="arithmatex">\(\Omega = \{ \heartsuit, \spadesuit, \clubsuit, \diamondsuit \}\)</span>
-* 检验产品：<span class="arithmatex">\(\Omega = \{ \text{合格}, \text{次品} \}\)</span></p>
-<p>虽然我们可以计算这些事件的概率，但无法进行更高级的数学运算。我们没法计算“<span class="arithmatex">\(\text{Head} + \text{Tail}\)</span>”是多少，也没法对“<span class="arithmatex">\(\heartsuit\)</span>”求导数。</p>
-<p>为了使用微积分、线性代数等强大的数学工具，我们需要建立一座桥梁，将抽象的样本点映射为实数。<strong>随机变量 (Random Variable)</strong> 就是这座桥梁。它让我们从研究“事件”转变为研究“函数”和“分布”。</p>
-<p>本章我们将重点讨论<strong>一维随机变量</strong>及其分布规律。</p>
-<h2 id="21">2.1 随机变量的基本概念</h2>
-<h3 id="211-definition-of-random-variables">2.1.1 随机变量的定义 (Definition of Random Variables)</h3>
-<p><strong>1. 什么是随机变量？</strong>
-直观地说，随机变量就是一个“翻译官”。它把随机试验的每一个结果（样本点）都翻译成一个唯一的实数。</p>
+<h1 id="_1">第三章：多维随机变量及其分布</h1>
+<p><strong>前言：为什么要进入高维世界？</strong></p>
+<p>在第一章和第二章中，我们研究的都是“独行侠”——单个随机变量（如单支股票的收益率）。但在现实的金融世界里，资产从来不是孤立存在的。
+* <strong>投资组合 (Portfolio)</strong>：我们需要同时持有股票、债券、黄金。
+* <strong>配对交易 (Pair Trading)</strong>：我们需要盯着两只相关性很高的股票的价差。
+* <strong>宏观分析</strong>：我们需要分析通胀率、利率和汇率的联动。</p>
+<p>为了描述这些变量之间“牵一发而动全身”的复杂关系（特别是<strong>相关性</strong>），我们需要把多个随机变量放在一起研究。这就是<strong>随机向量</strong>。</p>
+<h2 id="31">3.1 多维随机变量及其联合分布</h2>
+<h3 id="311-random-vectors">3.1.1 多维随机变量 (Random Vectors)</h3>
+<p><strong>1. 定义：从标量到向量</strong></p>
+<p>直观地说，如果我们在同一个样本空间 <span class="arithmatex">\(\Omega\)</span> 上定义了 <span class="arithmatex">\(n\)</span> 个随机变量 <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span>，那么由它们组成的向量 <span class="arithmatex">\(\mathbf{X} = (X_1, X_2, \dots, X_n)\)</span> 就称为 <strong><span class="arithmatex">\(n\)</span> 维随机变量</strong> 或 <strong>随机向量</strong>。</p>
 <ul>
-<li><strong>文字描述</strong>：随机变量是定义在样本空间 <span class="arithmatex">\(\Omega\)</span> 上，取值于实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 的一个函数。</li>
-<li><strong>符号描述</strong>：设 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 是一个概率空间。随机变量 <span class="arithmatex">\(X\)</span> 是一个映射：
-    $<span class="arithmatex">\(X: \Omega \to \mathbb{R}\)</span>$
-    对于每一个样本点 <span class="arithmatex">\(\omega \in \Omega\)</span>，都有唯一的实数 <span class="arithmatex">\(X(\omega)\)</span> 与之对应。</li>
+<li><strong>映射视角</strong>：
+    <span class="arithmatex">\(\mathbf{X}\)</span> 是一个从样本空间 <span class="arithmatex">\(\Omega\)</span> 到 <span class="arithmatex">\(n\)</span> 维欧几里得空间 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的映射：
+    $<span class="arithmatex">\(\mathbf{X}: \Omega \to \mathbb{R}^n\)</span>$
+    对于每一个样本点 <span class="arithmatex">\(\omega \in \Omega\)</span>，都有一个向量值 <span class="arithmatex">\(\mathbf{X}(\omega) = (X_1(\omega), \dots, X_n(\omega))\)</span> 与之对应。</li>
 </ul>
 <blockquote>
-<p><strong>⚠️ 考点：可测性 (Measurability)</strong>
-并不是任意一个函数都能叫随机变量。在测度论中，随机变量必须是 <strong><span class="arithmatex">\(\mathcal{F}\)</span>-可测函数</strong>。
-<strong>定义</strong>：对于实数轴上的任意博雷尔集 (Borel Set) <span class="arithmatex">\(B \in \mathcal{B}(\mathbb{R})\)</span>，其原像必须属于事件域 <span class="arithmatex">\(\mathcal{F}\)</span>：
-$<span class="arithmatex">\(X^{-1}(B) = \{ \omega \in \Omega : X(\omega) \in B \} \in \mathcal{F}\)</span>$
-<em>解释</em>：这意味着我们关心的数值范围（比如 <span class="arithmatex">\(X &gt; 5\)</span>），必须对应一个我们<strong>能算出概率的合法事件</strong>。如果 <span class="arithmatex">\(X\)</span> 映射出的结果对应的原事件不在 <span class="arithmatex">\(\mathcal{F}\)</span> 里，那概率 <span class="arithmatex">\(P(X&gt;5)\)</span> 就无法定义，<span class="arithmatex">\(X\)</span> 也就不是随机变量。</p>
+<p><strong>💡 测度论视角 (The Measure View)</strong></p>
+<p>这里有一个博士入学考试常考的概念陷阱：<strong>并不是任意把 n 个函数捆在一起就能叫随机向量。</strong></p>
+<p><span class="arithmatex">\(\mathbf{X}\)</span> 必须是 <strong><span class="arithmatex">\(\mathcal{F}\)</span>-可测的</strong>。即对于 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中的任意博雷尔集 (Borel Set) <span class="arithmatex">\(B\)</span>，其原像必须属于事件域 <span class="arithmatex">\(\mathcal{F}\)</span>：
+$<span class="arithmatex">\(X^{-1}(B) = \{ \omega : \mathbf{X}(\omega) \in B \} \in \mathcal{F}\)</span>$
+* <strong>直觉解释</strong>：这保证了我们讨论诸如“股票A涨且股票B跌”（即向量落在某个象限）这类复杂事件的概率是合法的。如果在数学上无法测量（Unmeasurable），讨论概率就没有任何意义。</p>
 </blockquote>
-<p><strong>2. 常见的随机变量</strong>
-* <strong>扔硬币</strong>：
-    * <span class="arithmatex">\(\Omega = \{ \text{正面 (H)}, \text{反面 (T)} \}\)</span>
-    * 定义 <span class="arithmatex">\(X\)</span>：<span class="arithmatex">\(X(H) = 1, X(T) = 0\)</span>。
-    * 此时 <span class="arithmatex">\(P(X=1) = P(\{H\}) = 0.5\)</span>。
-* <strong>掷骰子</strong>：
-    * <span class="arithmatex">\(\Omega = \{ \omega_1, \omega_2, \dots, \omega_6 \}\)</span>，其中 <span class="arithmatex">\(\omega_i\)</span> 表示点数为 <span class="arithmatex">\(i\)</span> 的面。
-    * 定义 <span class="arithmatex">\(X\)</span>：<span class="arithmatex">\(X(\omega_i) = i\)</span>。
-    * 事件“点数大于 4”可以表示为 <span class="arithmatex">\(X &gt; 4\)</span>，对应原事件 <span class="arithmatex">\(\{ \omega_5, \omega_6 \}\)</span>。</p>
-<p><strong>3. 随机变量的分类</strong>
-根据取值情况的不同，随机变量主要分为两类（在高等概率论中还有第三类）：</p>
-<ol>
-<li><strong>离散型 (Discrete RV)</strong>：<ul>
-<li>取值是有限个或可列无限个（如 <span class="arithmatex">\(0, 1, 2, \dots\)</span>）。</li>
-<li><em>例子</em>：二项分布、泊松分布、几何分布。</li>
-</ul>
-</li>
-<li><strong>连续型 (Continuous RV)</strong>：<ul>
-<li>取值充满整个区间（如 <span class="arithmatex">\([0, 1]\)</span> 或 <span class="arithmatex">\((-\infty, +\infty)\)</span>），且任意单点的概率为 0。</li>
-<li><em>例子</em>：正态分布、指数分布、均匀分布。</li>
-</ul>
-</li>
-<li><strong>混合型/奇异型 (Mixed/Singular RV)</strong>：<ul>
-<li>既不是纯离散也不是纯连续，或者存在奇异部分（如康托尔分布）。</li>
-<li><em>例子</em>：带跳跃的资产价格模型（Jump-Diffusion Model）。</li>
-</ul>
-</li>
-</ol>
-<h3 id="212-cumulative-distribution-function-cdf">2.1.2 随机变量的分布函数 (Cumulative Distribution Function, CDF)</h3>
-<p>对于任何随机变量（无论是离散还是连续），我们都需要一个统一的工具来描述它的概率规律。这个工具就是<strong>分布函数</strong>。</p>
-<p><strong>1. 定义与概念</strong>
-设 <span class="arithmatex">\(X\)</span> 是一个随机变量，<span class="arithmatex">\(x\)</span> 是任意实数。函数
-$<span class="arithmatex">\(F(x) = P(X \le x) = P(\{ \omega \in \Omega : X(\omega) \le x \})\)</span>$
-称为 <span class="arithmatex">\(X\)</span> 的<strong>累积分布函数</strong> (Cumulative Distribution Function)，简称 <strong>CDF</strong> 或分布函数。</p>
+<p><strong>2. 实际情况举例</strong></p>
 <ul>
-<li><strong>几何意义</strong>：<span class="arithmatex">\(F(x)\)</span> 描述了概率在实数轴上从左到右的“累积”过程。它是概率质量的扫描仪。</li>
+<li><strong>量化因子</strong>：一个因子的多维度表现（动量、波动率、换手率）构成一个 3 维随机向量。</li>
+<li><strong>期权定价</strong>：在 Heston 模型中，(标的资产价格 <span class="arithmatex">\(S_t\)</span>, 随机波动率 <span class="arithmatex">\(v_t\)</span>) 构成一个 2 维随机过程。</li>
 </ul>
-<p><strong>2. 表现形式</strong>
-* <strong>离散型</strong>：呈阶梯状（Step Function）。在可能取值点处发生跳跃，跳跃高度等于该点的概率。
-* <strong>连续型</strong>：呈连续曲线状。光滑平缓，没有跳跃。</p>
-<p><strong>3. 重要性质 (Properties) —— 笔试必考</strong>
-一个函数 <span class="arithmatex">\(F(x)\)</span> 要成为合法的分布函数，必须满足以下三条性质：</p>
-<ol>
+<h3 id="312-joint-cdf">3.1.2 联合分布函数 (Joint CDF)</h3>
+<p>为了描述这些变量“同时”取值的概率规律，我们定义<strong>联合累积分布函数</strong>。</p>
+<p><strong>1. 定义与表达式</strong></p>
+<p>设 <span class="arithmatex">\((X, Y)\)</span> 是二维随机变量。对于任意实数 <span class="arithmatex">\(x, y\)</span>，二元函数：
+$<span class="arithmatex">\(F(x, y) = P(X \le x, Y \le y) = P(\{ \omega : X(\omega) \le x \} \cap \{ \omega : Y(\omega) \le y \})\)</span>$
+称为 <span class="arithmatex">\((X, Y)\)</span> 的<strong>联合分布函数</strong>。</p>
+<ul>
+<li><strong>几何意义</strong>：在平面直角坐标系中，<span class="arithmatex">\(F(x, y)\)</span> 代表点 <span class="arithmatex">\((x, y)\)</span> <strong>左下方</strong>无穷矩形区域内的概率质量。</li>
+</ul>
+<p><strong>2. 相关定理与性质</strong></p>
+<ul>
+<li><strong>单调性</strong>：<span class="arithmatex">\(F(x, y)\)</span> 对每个变量都是单调不减的。</li>
+<li><strong>有界性</strong>：<ul>
+<li><span class="arithmatex">\(0 \le F(x, y) \le 1\)</span></li>
+<li><span class="arithmatex">\(F(-\infty, y) = F(x, -\infty) = 0\)</span> （不可能事件）</li>
+<li><span class="arithmatex">\(F(+\infty, +\infty) = 1\)</span> （必然事件）</li>
+</ul>
+</li>
+<li><strong>右连续性</strong>：<span class="arithmatex">\(F(x, y)\)</span> 关于每个变量都是右连续的。</li>
 <li>
-<p><strong>单调非减性 (Monotonically Non-decreasing)</strong>：
-    若 <span class="arithmatex">\(x_1 &lt; x_2\)</span>，则 <span class="arithmatex">\(F(x_1) \le F(x_2)\)</span>。</p>
-<ul>
-<li><em>解释</em>：随着 <span class="arithmatex">\(x\)</span> 增大，包含的范围越来越大，累积的概率自然只增不减。</li>
-</ul>
-</li>
-<li>
-<p><strong>规范性 (Normalization / Boundedness)</strong>：
-    $<span class="arithmatex">\(\lim_{x \to -\infty} F(x) = 0, \quad \lim_{x \to +\infty} F(x) = 1\)</span>$</p>
-<ul>
-<li><em>解释</em>：不可能有数值比 <span class="arithmatex">\(-\infty\)</span> 还小，所有数值一定都比 <span class="arithmatex">\(+\infty\)</span> 小。</li>
-</ul>
-</li>
-<li>
-<p><strong>右连续性 (Right Continuity)</strong>：
-    $<span class="arithmatex">\(\lim_{x \to x^+} F(x) = F(x)\)</span>$</p>
-<ul>
-<li><em>解释</em>：这取决于定义中的“小于等于 (<span class="arithmatex">\(\le\)</span>)”。</li>
-<li><em>反例</em>：如果我们定义 <span class="arithmatex">\(F(x) = P(X &lt; x)\)</span>，那它就是左连续的。但在主流数学体系（包括柯尔莫哥洛夫体系）中，标准定义是右连续。</li>
-</ul>
-</li>
-</ol>
-<p><strong>4. 公式与概率的对应关系</strong>
-通过 CDF，我们可以计算任意区间的概率：
-* <span class="arithmatex">\(P(a &lt; X \le b) = F(b) - F(a)\)</span>
-* <span class="arithmatex">\(P(X &gt; a) = 1 - F(a)\)</span>
-* <span class="arithmatex">\(P(X = a) = F(a) - F(a^-)\)</span> （即 <span class="arithmatex">\(a\)</span> 处的跳跃高度）
-    * <em>注</em>：对于连续型随机变量，没有跳跃，所以 <span class="arithmatex">\(P(X=a) = 0\)</span>。</p>
-<h2 id="22">2.2 随机变量的类型与常见分布</h2>
-<p>在量化研究中，我们遇到的变量主要分为两类：一类是跳跃的（比如每天的交易次数、涨跌停家数），对应离散型；另一类是连续波动的（比如股价收益率、期权隐含波动率），对应连续型。</p>
-<h3 id="221-discrete-rvs">2.2.1 离散型随机变量及其分布律 (Discrete RVs)</h3>
-<p><strong>1. 分布律 (Probability Mass Function, PMF)</strong>
-对于离散型随机变量 <span class="arithmatex">\(X\)</span>，它所有可能的取值为 <span class="arithmatex">\(x_1, x_2, \dots\)</span>。我们需要知道取每一个值的概率是多少。
-定义分布律为：
-$<span class="arithmatex">\(P(X=x_k) = p_k, \quad k=1, 2, \dots\)</span>$</p>
-<ul>
-<li>
-<p><strong>表现形式</strong>：</p>
-<ul>
-<li><strong>表格法</strong>：最直观，考试常考。
-    | <span class="arithmatex">\(X\)</span> | <span class="arithmatex">\(x_1\)</span> | <span class="arithmatex">\(x_2\)</span> | <span class="arithmatex">\(\dots\)</span> | <span class="arithmatex">\(x_n\)</span> |
-    | :--- | :--- | :--- | :--- | :--- |
-    | <span class="arithmatex">\(P\)</span> | <span class="arithmatex">\(p_1\)</span> | <span class="arithmatex">\(p_2\)</span> | <span class="arithmatex">\(\dots\)</span> | <span class="arithmatex">\(p_n\)</span> |</li>
-<li><strong>矩阵/向量法</strong>：在 Python 编程中，我们通常用向量 <code>[p1, p2, ...]</code> 来表示。</li>
-</ul>
-</li>
-<li>
-<p><strong>基本性质 (必背)</strong>：</p>
-<ol>
-<li><strong>非负性</strong>：<span class="arithmatex">\(p_k \ge 0\)</span>。</li>
-<li><strong>规范性</strong>：<span class="arithmatex">\(\sum_{k=1}^{\infty} p_k = 1\)</span>。</li>
-</ol>
+<p><strong>矩形概率公式（核心计算工具）</strong>：</p>
+<p>要计算矩形区域 <span class="arithmatex">\(D = \{ (u, v) : x_1 &lt; u \le x_2, y_1 &lt; v \le y_2 \}\)</span> 的概率，我们使用类似于二维前缀和的<strong>容斥原理</strong>：
+$<span class="arithmatex">\(P(x_1 &lt; X \le x_2, y_1 &lt; Y \le y_2) = F(x_2, y_2) - F(x_1, y_2) - F(x_2, y_1) + F(x_1, y_1)\)</span>$
+* <em>记忆口诀</em>：大矩形 - 上方条 - 左方条 + 重复减去的左下角。</p>
 </li>
 </ul>
-<p><strong>2. 常见离散分布</strong></p>
-<p><strong>(1) 0-1 分布 (Bernoulli Distribution)</strong>
-* <strong>定义</strong>：试验只有两个结果（成功/失败）。记为 <span class="arithmatex">\(X \sim B(1, p)\)</span>。
-* <strong>分布律</strong>：<span class="arithmatex">\(P(X=1)=p, \quad P(X=0)=1-p\)</span>。
-* <strong>量化含义</strong>：单次交易是盈利还是亏损；期权是否行权。</p>
-<p><strong>(2) 二项分布 (Binomial Distribution)</strong>
-* <strong>定义</strong>：<span class="arithmatex">\(n\)</span> 重伯努利试验中成功的次数。记为 <span class="arithmatex">\(X \sim B(n, p)\)</span>。
-* <strong>分布律</strong>：
-    $<span class="arithmatex">\(P(X=k) = C_n^k p^k (1-p)^{n-k}, \quad k=0, 1, \dots, n\)</span>$
-* <strong>性质</strong>：<span class="arithmatex">\(E[X] = np, \quad Var(X) = np(1-p)\)</span>。
-* <strong>量化含义</strong>：假设策略胜率为 55%，做 100 次交易，盈利次数的分布。</p>
-<p><strong>(3) 泊松分布 (Poisson Distribution)</strong>
-这是金融工程中极其重要的分布，用于描述<strong>“稀有事件”</strong>。
-* <strong>定义</strong>：记为 <span class="arithmatex">\(X \sim P(\lambda)\)</span> 或 <span class="arithmatex">\(\pi(\lambda)\)</span>。
-* <strong>分布律</strong>：
-    $<span class="arithmatex">\(P(X=k) = \frac{\lambda^k}{k!} e^{-\lambda}, \quad k=0, 1, 2, \dots\)</span>$
-* <strong>参数含义</strong>：<span class="arithmatex">\(\lambda\)</span> 代表单位时间内事件发生的<strong>平均次数</strong>（强度）。
-* <strong>泊松定理 (Poisson Limit Theorem)</strong>：
-    当 <span class="arithmatex">\(n \to \infty, p \to 0\)</span> 且 <span class="arithmatex">\(np = \lambda\)</span> 保持不变时，二项分布收敛于泊松分布：
-    $<span class="arithmatex">\(\lim_{n \to \infty} C_n^k p^k (1-p)^{n-k} = \frac{\lambda^k}{k!} e^{-\lambda}\)</span>$
-    * <em>直觉</em>：如果你每秒钟都在做高频交易（<span class="arithmatex">\(n\)</span> 很大），但每次成交概率很低（<span class="arithmatex">\(p\)</span> 很小），那么你一分钟内的成交次数就服从泊松分布。
-* <strong>跳跃过程</strong>：在 Merton 跳跃扩散模型 (Jump Diffusion) 中，资产价格发生跳跃的次数通常假设服从泊松分布。</p>
-<p><strong>(4) 超几何分布 (Hypergeometric Distribution)</strong>
-* <strong>定义</strong>：<span class="arithmatex">\(N\)</span> 件产品中有 <span class="arithmatex">\(M\)</span> 件次品，<strong>不放回</strong>地抽取 <span class="arithmatex">\(n\)</span> 件，其中次品数 <span class="arithmatex">\(X\)</span> 的分布。记为 <span class="arithmatex">\(X \sim H(n, M, N)\)</span>。
-* <strong>分布律</strong>：
-    $<span class="arithmatex">\(P(X=k) = \frac{C_M^k C_{N-M}^{n-k}}{C_N^n}\)</span>$
-* <strong>区别</strong>：如果是有放回抽样，就是二项分布。当总体 <span class="arithmatex">\(N\)</span> 很大时，超几何分布近似于二项分布（因为拿走一个对总体影响微乎其微）。</p>
-<h3 id="222-continuous-rvs">2.2.2 连续型随机变量及其概率密度函数 (Continuous RVs)</h3>
-<p><strong>1. 概率密度函数 (PDF)</strong>
-对于连续型变量，单点概率 <span class="arithmatex">\(P(X=x)=0\)</span>，所以我们要讨论“概率的密度”。
-如果存在非负函数 <span class="arithmatex">\(f(x)\)</span>，使得对于任意区间 <span class="arithmatex">\([a, b]\)</span>：
-$<span class="arithmatex">\(P(a &lt; X \le b) = \int_a^b f(x) dx\)</span>$
-则称 <span class="arithmatex">\(X\)</span> 为连续型随机变量，<span class="arithmatex">\(f(x)\)</span> 为<strong>概率密度函数</strong>。</p>
-<ul>
-<li><strong>分布函数与 PDF 的关系</strong>：
-    $<span class="arithmatex">\(F(x) = \int_{-\infty}^x f(t) dt, \quad f(x) = F'(x)\)</span>$</li>
-<li><strong>几何意义</strong>：<ul>
-<li><span class="arithmatex">\(f(x)\)</span> 是曲线的高度。</li>
-<li>概率 <span class="arithmatex">\(P\)</span> 是曲线下方的<strong>面积</strong>。</li>
-<li><span class="arithmatex">\(F(x)\)</span> 是从左无穷远积分别到 <span class="arithmatex">\(x\)</span> 的累积面积。</li>
-</ul>
-</li>
-<li><strong>基本性质 (必背)</strong>：<ol>
-<li><span class="arithmatex">\(f(x) \ge 0\)</span> （注意：<span class="arithmatex">\(f(x)\)</span> 可以大于 1，只要积分是 1 即可）。</li>
-<li><span class="arithmatex">\(\int_{-\infty}^{+\infty} f(x) dx = 1\)</span> （总面积为 1）。</li>
-</ol>
-</li>
-</ul>
-<p><strong>2. 常见连续分布</strong></p>
-<p><strong>(1) 均匀分布 (Uniform Distribution)</strong>
-* <strong>定义</strong>：在区间 <span class="arithmatex">\([a, b]\)</span> 上“等可能”出现。记为 <span class="arithmatex">\(X \sim U(a, b)\)</span>。
-* <strong>PDF</strong>：
-    $<span class="arithmatex">\(f(x) = \begin{cases} \frac{1}{b-a}, &amp; a &lt; x &lt; b \\ 0, &amp; \text{其他} \end{cases}\)</span>$
-* <strong>量化含义</strong>：
-    * 这是蒙特卡洛模拟 (Monte Carlo) 的基石。计算机生成的随机数 <code>rand()</code> 本质上就是 <span class="arithmatex">\(U(0, 1)\)</span>。
-    * 在贝叶斯统计中，如果我们对参数一无所知，通常假设先验分布为均匀分布（无信息的先验）。</p>
-<p><strong>(2) 指数分布 (Exponential Distribution)</strong>
-* <strong>定义</strong>：常用于描述“寿命”或“等待时间”。记为 <span class="arithmatex">\(X \sim E(\lambda)\)</span>。
-* <strong>PDF</strong>：
-    $<span class="arithmatex">\(f(x) = \begin{cases} \lambda e^{-\lambda x}, &amp; x &gt; 0 \\ 0, &amp; x \le 0 \end{cases}\)</span>$
-* <strong>重要性质：无记忆性 (Memorylessness)</strong>
-    $<span class="arithmatex">\(P(X &gt; s+t | X &gt; s) = P(X &gt; t)\)</span>$
-    * <em>解释</em>：如果一个灯泡已经亮了 <span class="arithmatex">\(s\)</span> 小时没坏，它再亮 <span class="arithmatex">\(t\)</span> 小时的概率，和它是一个新灯泡时能亮 <span class="arithmatex">\(t\)</span> 小时的概率是一样的。它“忘记”了自己已经工作了多久。
-* <strong>与泊松分布的关系 (高频考点)</strong>：
-    如果某事件发生的次数服从参数为 <span class="arithmatex">\(\lambda\)</span> 的泊松分布（泊松流），那么<strong>相邻两次事件发生的时间间隔</strong>服从参数为 <span class="arithmatex">\(\lambda\)</span> 的指数分布。
-    * <em>泊松分布</em>：数数（离散）。
-    * <em>指数分布</em>：量时间（连续）。</p>
-<p><strong>(3) 正态分布 (Normal / Gaussian Distribution)</strong>
-这是概率论的“皇帝”，中心极限定理 (CLT) 的归宿。
-* <strong>定义</strong>：记为 <span class="arithmatex">\(X \sim N(\mu, \sigma^2)\)</span>。
-* <strong>PDF (必须能默写)</strong>：
-    $<span class="arithmatex">\(f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}, \quad -\infty &lt; x &lt; +\infty\)</span>$
-* <strong>参数</strong>：<span class="arithmatex">\(\mu\)</span> 决定位置（对称轴），<span class="arithmatex">\(\sigma\)</span> 决定形状（胖瘦）。
-* <strong>标准正态分布 <span class="arithmatex">\(N(0, 1)\)</span></strong>：
-    令 <span class="arithmatex">\(Z = \frac{X-\mu}{\sigma}\)</span>，则 <span class="arithmatex">\(Z \sim N(0, 1)\)</span>。其 PDF 记为 <span class="arithmatex">\(\phi(x)\)</span>，CDF 记为 <span class="arithmatex">\(\Phi(x)\)</span>。
-* <strong>3<span class="arithmatex">\(\sigma\)</span> 原则</strong>：
-    * <span class="arithmatex">\(P(|X-\mu| &lt; \sigma) \approx 68.26\%\)</span>
-    * <span class="arithmatex">\(P(|X-\mu| &lt; 2\sigma) \approx 95.44\%\)</span>
-    * <span class="arithmatex">\(P(|X-\mu| &lt; 3\sigma) \approx 99.73\%\)</span>
-    * <em>量化应用</em>：在布林带 (Bollinger Bands) 策略中，我们通常把上下轨设为 2 倍标准差，意味着股价有 95% 的概率在这个通道内运行。突破通道通常意味着异常或趋势反转。</p>
-<h2 id="23">2.3 随机变量的数字特征</h2>
-<p>如果说分布函数 <span class="arithmatex">\(F(x)\)</span> 是随机变量的“全身照”，那么数字特征就是它的“体检报告”。在量化交易中，我们往往不需要知道股价每一秒的分布细节，只需要抓住<strong>期望（预期收益）</strong>和<strong>方差（风险）</strong>这两个核心指标，就足以构建马科维茨（Markowitz）投资组合模型了。</p>
-<h3 id="231-mathematical-expectation">2.3.1 数学期望 (Mathematical Expectation)</h3>
-<h4 id="1">1. 概念起源：分赌本问题</h4>
-<p>期望的概念最早源于帕斯卡和费马对“分赌本问题”的讨论。
-* <strong>场景</strong>：甲乙两人赌硬币，先赢 3 局者拿走全部 100 元。当前甲赢了 2 局，乙赢了 1 局，赌局因故中断。钱该怎么分？
-* <strong>直觉</strong>：甲赢面大，应该多拿。
-* <strong>期望解法</strong>：如果继续赌，甲赢的概率是 <span class="arithmatex">\(0.5 + 0.5 \times 0.5 = 0.75\)</span>（下一局直接赢，或下一局输但下下局赢）。乙赢的概率是 <span class="arithmatex">\(0.25\)</span>。
-* <strong>结论</strong>：公平的分配方式不是看“现在谁赢得多”，而是看“未来预期的潜在收益”。甲应得 <span class="arithmatex">\(100 \times 0.75 = 75\)</span> 元。这就是<strong>数学期望</strong>的雏形——<strong>对未来的加权预测</strong>。</p>
-<h4 id="2">2. 定义与物理意义</h4>
-<ul>
-<li>
-<p><strong>定义</strong>：</p>
-<ul>
-<li><strong>离散型</strong>：<span class="arithmatex">\(E[X] = \sum_{k} x_k p_k\)</span>（要求级数绝对收敛）。</li>
-<li><strong>连续型</strong>：<span class="arithmatex">\(E[X] = \int_{-\infty}^{+\infty} x f(x) dx\)</span>（要求积分绝对收敛）。</li>
-</ul>
-<blockquote>
-<p><strong>💡 测度论视角 (Lebesgue Integral)</strong>
-在高等概率论中，期望本质上是随机变量 <span class="arithmatex">\(X\)</span> 关于概率测度 <span class="arithmatex">\(P\)</span> 的<strong>勒贝格积分</strong>：
-$<span class="arithmatex">\(E[X] = \int_{\Omega} X(\omega) dP(\omega)\)</span>$
-这种定义方式统一了离散和连续，并且能够处理更复杂的“混合分布”（比如带有跳跃的资产价格）。</p>
-</blockquote>
-</li>
-<li>
-<p><strong>物理意义</strong>：期望是随机变量分布的<strong>“重心”</strong>。如果你把概率密度看作质量分布，支撑点就在 <span class="arithmatex">\(E[X]\)</span> 处。</p>
-</li>
-<li>
-<p><strong>现实案例</strong>：</p>
-<ul>
-<li><strong>彩票</strong>：一张 2 元的彩票，中奖概率极低，计算下来的数学期望通常只有 0.8 元左右。这意味着长期买彩票的人，每买一张就在亏损 1.2 元（智商税）。</li>
-<li><strong>交易系统</strong>：一个胜率 40% 的策略，如果盈亏比是 3:1，那么它的单笔期望收益是正的（<span class="arithmatex">\(0.4 \times 3 - 0.6 \times 1 = 0.6\)</span>）。<strong>做交易是做期望，而不是做胜率。</strong></li>
-</ul>
-</li>
-</ul>
-<h4 id="3">3. 重要性质</h4>
-<ol>
-<li><strong>线性性 (Linearity)</strong>：<span class="arithmatex">\(E[aX + bY + c] = aE[X] + bE[Y] + c\)</span>。<ul>
-<li><em>注意</em>：<strong>不需要</strong> <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 独立。这是构建投资组合理论的基石——组合的预期收益等于各资产预期收益的加权平均。</li>
-</ul>
-</li>
-<li><strong>随机变量函数的期望 (LOTUS)</strong>：
-    求 <span class="arithmatex">\(Y = g(X)\)</span> 的期望，<strong>不需要</strong>先求出 <span class="arithmatex">\(Y\)</span> 的分布 <span class="arithmatex">\(f_Y(y)\)</span>，直接用 <span class="arithmatex">\(X\)</span> 的分布算：
-    $<span class="arithmatex">\(E[g(X)] = \int_{-\infty}^{+\infty} g(x) f(x) dx\)</span>$
-    这被称为<strong>无意识统计学家定律 (Law of the Unconscious Statistician)</strong>。</li>
-</ol>
-<h3 id="232-variance-standard-deviation">2.3.2 方差与标准差 (Variance &amp; Standard Deviation)</h3>
-<h4 id="1_1">1. 定义与公式</h4>
-<ul>
-<li><strong>定义</strong>：方差衡量随机变量偏离其中心的程度。
-    $<span class="arithmatex">\(Var(X) = E[(X - E[X])^2]\)</span>$</li>
-<li><strong>计算公式</strong>：实际计算中常用：
-    $<span class="arithmatex">\(Var(X) = E[X^2] - (E[X])^2\)</span>$</li>
-<li><strong>标准差</strong>：<span class="arithmatex">\(\sigma = \sqrt{Var(X)}\)</span>。在金融中，它直接对应<strong>波动率 (Volatility)</strong>。</li>
-</ul>
-<h4 id="2_1">2. 物理与现实意义</h4>
-<ul>
-<li><strong>物理意义</strong>：转动惯量。分布越分散，转动惯量越大。</li>
-<li><strong>现实案例</strong>：银行理财产品的风险等级（R1-R5），本质上就是根据其历史收益率的标准差来划分的。标准差越大，可能亏损的幅度也越大。</li>
-</ul>
-<h4 id="3_1">3. 重要性质</h4>
-<ol>
-<li><strong>平移不变性</strong>：<span class="arithmatex">\(Var(X + c) = Var(X)\)</span>。加一个常数不改变波动。</li>
-<li><strong>缩放性</strong>：<span class="arithmatex">\(Var(cX) = c^2 Var(X)\)</span>。杠杆加倍，方差变成 4 倍。</li>
-<li><strong>和的方差</strong>：
-    $<span class="arithmatex">\(Var(X \pm Y) = Var(X) + Var(Y) \pm 2Cov(X, Y)\)</span>$<ul>
-<li><em>特别注意</em>：只有当 <span class="arithmatex">\(X, Y\)</span> <strong>不相关</strong>（即 <span class="arithmatex">\(Cov=0\)</span>）时，才有 <span class="arithmatex">\(Var(X+Y) = Var(X) + Var(Y)\)</span>。这是分散化投资能降低风险的数学原理。</li>
-</ul>
-</li>
-</ol>
-<h4 id="4-chebyshevs-inequality">4. 切比雪夫不等式 (Chebyshev's Inequality)</h4>
-<p>这是一个不需要知道具体分布就能估算尾部风险的神器。</p>
-<ul>
-<li><strong>定理</strong>：对于任意随机变量 <span class="arithmatex">\(X\)</span> (只要方差存在)，对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：
-    $<span class="arithmatex">\(P(|X - \mu| \ge \epsilon) \le \frac{\sigma^2}{\epsilon^2}\)</span>$</li>
-<li><strong>证明思路 (Proof Sketch)</strong>：
-    利用马尔可夫不等式或直接放大积分区域。
-    $$
-    \sigma^2 = \int_{-\infty}^{+\infty} (x-\mu)^2 f(x) dx \ge \int_{|x-\mu| \ge \epsilon} (x-\mu)^2 f(x) dx
-    $$
-    在积分区域 <span class="arithmatex">\(|x-\mu| \ge \epsilon\)</span> 内，<span class="arithmatex">\((x-\mu)^2 \ge \epsilon^2\)</span>，所以：
-    $$
-    \sigma^2 \ge \epsilon^2 \int_{|x-\mu| \ge \epsilon} f(x) dx = \epsilon^2 P(|X-\mu| \ge \epsilon)
-    $$
-    移项即得证。</li>
-<li><strong>意义</strong>：哪怕不知道黑天鹅长什么样，只要知道波动率，就能给极端风险画一条“上限线”。</li>
-</ul>
-<h3 id="233">2.3.3 协方差、相关系数与矩</h3>
-<h4 id="1-covariance">1. 协方差 (Covariance)</h4>
-<ul>
-<li><strong>定义</strong>：衡量两个变量“同向变动”的程度。
-    $<span class="arithmatex">\(Cov(X, Y) = E[(X-\mu_x)(Y-\mu_y)] = E[XY] - E[X]E[Y]\)</span>$</li>
-<li><strong>协方差矩阵</strong>：对于 <span class="arithmatex">\(n\)</span> 维随机变量 <span class="arithmatex">\(\mathbf{X} = (X_1, \dots, X_n)^T\)</span>，其协方差矩阵 <span class="arithmatex">\(\Sigma\)</span> 是一个对称半正定矩阵，第 <span class="arithmatex">\((i, j)\)</span> 个元素是 <span class="arithmatex">\(Cov(X_i, X_j)\)</span>。</li>
-</ul>
-<h4 id="2-correlation-coefficient">2. 相关系数 (Correlation Coefficient)</h4>
-<ul>
-<li><strong>定义</strong>：标准化的协方差，消除了量纲影响。
-    $<span class="arithmatex">\(\rho_{XY} = \frac{Cov(X, Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\)</span>$</li>
-<li><strong>性质定理</strong>：<span class="arithmatex">\(|\rho_{XY}| \le 1\)</span>。<ul>
-<li><strong>证明 (柯西-施瓦茨不等式的概率版)</strong>：
-    构造一个关于 <span class="arithmatex">\(t\)</span> 的二次函数：
-    $<span class="arithmatex">\(g(t) = E[(t(X-\mu_x) + (Y-\mu_y))^2] \ge 0\)</span>$
-    展开后得到一个关于 <span class="arithmatex">\(t\)</span> 的一元二次方程 <span class="arithmatex">\(At^2 + Bt + C \ge 0\)</span>。
-    因为恒非负，所以判别式 <span class="arithmatex">\(\Delta = B^2 - 4AC \le 0\)</span>。
-    代入系数即可推出 <span class="arithmatex">\((Cov)^2 \le Var(X)Var(Y)\)</span>，开方即得 <span class="arithmatex">\(|\rho| \le 1\)</span>。 <span class="arithmatex">\(\blacksquare\)</span></li>
-</ul>
-</li>
-</ul>
-<h4 id="3-moments">3. 矩 (Moments)</h4>
-<ul>
-<li><strong>原点矩</strong>：<span class="arithmatex">\(E[X^k]\)</span>。一阶原点矩就是期望。</li>
-<li><strong>中心矩</strong>：<span class="arithmatex">\(E[(X-\mu)^k]\)</span>。二阶中心矩就是方差。</li>
-</ul>
-<hr />
-<h3 id="234">2.3.4 其他特征：偏度、峰度与分位数</h3>
-<p>金融市场是非正态的，主要体现在<strong>偏</strong>和<strong>尖</strong>。</p>
-<ol>
-<li><strong>偏度 (Skewness)</strong>：三阶标准化中心矩。<ul>
-<li><span class="arithmatex">\(S &lt; 0\)</span>（左偏）：长尾在左边。<strong>金融资产收益率通常是左偏的</strong>（涨得慢，跌得快/深）。</li>
-</ul>
-</li>
-<li><strong>峰度 (Kurtosis)</strong>：四阶标准化中心矩。<ul>
-<li><span class="arithmatex">\(K &gt; 3\)</span>（尖峰肥尾）：极端值出现的概率比正态分布大得多。这是<strong>黑天鹅</strong>的数学栖息地。</li>
-</ul>
-</li>
-<li><strong>变异系数 (CV)</strong>：<span class="arithmatex">\(CV = \sigma / \mu\)</span>。衡量单位收益的风险，用于比较量纲不同的资产。</li>
-<li><strong>分位数 (Quantile)</strong>：<span class="arithmatex">\(x_\alpha\)</span> 满足 <span class="arithmatex">\(P(X \le x_\alpha) = \alpha\)</span>。<ul>
-<li><strong>中位数</strong>：<span class="arithmatex">\(\alpha = 0.5\)</span>。</li>
-<li><strong>VaR (Value at Risk)</strong>：风险价值本质上就是收益率分布的 <span class="arithmatex">\(\alpha\)</span> 分位数（如 5% 分位点）。</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h3 id="235">2.3.5 常见随机变量的期望与方差汇总</h3>
-<p>这是一张必须印在脑子里的表：</p>
+<h3 id="313-joint-pmf-discrete-case">3.1.3 联合分布列 (Joint PMF - Discrete Case)</h3>
+<p>如果 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 都是离散型的（例如抛两枚硬币），我们就用<strong>联合分布列</strong>来描述。</p>
+<p><strong>1. 定义</strong></p>
+<div class="arithmatex">\[p_{ij} = P(X = x_i, Y = y_j), \quad i,j = 1, 2, \dots\]</div>
+<p><strong>2. 表现形式</strong></p>
+<p>通常画成一个二维表格（矩阵）：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">分布</th>
-<th style="text-align: left;">记号</th>
-<th style="text-align: left;">期望 <span class="arithmatex">\(E[X]\)</span></th>
-<th style="text-align: left;">方差 <span class="arithmatex">\(Var(X)\)</span></th>
-<th style="text-align: left;">备注</th>
+<th style="text-align: left;"><span class="arithmatex">\(X \setminus Y\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(y_1\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(y_2\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(\dots\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>0-1分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(B(1, p)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(p\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(p(1-p)\)</span></td>
-<td style="text-align: left;">伯努利试验基础</td>
+<td style="text-align: left;"><strong><span class="arithmatex">\(x_1\)</span></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(p_{11}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(p_{12}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\dots\)</span></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>二项分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(B(n, p)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(np\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(np(1-p)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(n\)</span> 次独立伯努利</td>
+<td style="text-align: left;"><strong><span class="arithmatex">\(x_2\)</span></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(p_{21}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(p_{22}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\dots\)</span></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>泊松分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(P(\lambda)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
-<td style="text-align: left;"><strong>期望等于方差</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>均匀分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(U(a, b)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{a+b}{2}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{(b-a)^2}{12}\)</span></td>
-<td style="text-align: left;">12这个分母常考</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>指数分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(E(\lambda)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda}\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda^2}\)</span></td>
-<td style="text-align: left;">均值越小，衰减越快</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>正态分布</strong></td>
-<td style="text-align: left;"><span class="arithmatex">\(N(\mu, \sigma^2)\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\mu\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\sigma^2\)</span></td>
-<td style="text-align: left;">参数即特征</td>
+<td style="text-align: left;"><strong><span class="arithmatex">\(\dots\)</span></strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\dots\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\dots\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\dots\)</span></td>
 </tr>
 </tbody>
 </table>
+<p><strong>3. 性质</strong></p>
+<ul>
+<li><strong>非负性</strong>：<span class="arithmatex">\(p_{ij} \ge 0\)</span></li>
+<li><strong>归一性</strong>：<span class="arithmatex">\(\sum_i \sum_j p_{ij} = 1\)</span> （所有格子的概率加起来必须等于 1）。</li>
+</ul>
+<h3 id="314-joint-pdf-continuous-case">3.1.4 联合密度函数 (Joint PDF - Continuous Case)</h3>
+<p>对于连续型变量（如股价），单点概率为 0，我们关注的是<strong>概率密度</strong>。</p>
+<p><strong>1. 定义</strong></p>
+<p>如果存在非负函数 <span class="arithmatex">\(f(x, y)\)</span>，使得对于任意区域 <span class="arithmatex">\(D\)</span>，概率可以表示为积分：
+$<span class="arithmatex">\(P((X, Y) \in D) = \iint_D f(x, y) \, dx \, dy\)</span>$
+则称 <span class="arithmatex">\(f(x, y)\)</span> 为<strong>联合概率密度函数</strong>。</p>
+<p><strong>2. 与分布函数的关系</strong></p>
+<div class="arithmatex">\[F(x, y) = \int_{-\infty}^x \int_{-\infty}^y f(u, v) \, du \, dv$$
+$$f(x, y) = \frac{\partial^2 F}{\partial x \partial y} \quad (\text{在连续点处})\]</div>
+<p><strong>3. 几何意义与性质</strong></p>
+<ul>
+<li><strong>几何意义</strong>：<span class="arithmatex">\(z = f(x, y)\)</span> 是空间中的一个曲面（像一座山）。概率 <span class="arithmatex">\(P\)</span> 是以区域 <span class="arithmatex">\(D\)</span> 为底，曲面为顶的<strong>柱体体积</strong>。</li>
+<li><strong>归一性</strong>：<span class="arithmatex">\(\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f(x, y) \, dx \, dy = 1\)</span> （总体积为 1）。</li>
+</ul>
+<h3 id="315-common-multivariate-distributions">3.1.5 常用多维分布 (Common Multivariate Distributions)</h3>
+<p><strong>1. 多项分布 (Multinomial Distribution)</strong></p>
+<ul>
+<li><strong>概念</strong>：二项分布的推广。每次试验不是只有“成功/失败”两种结果，而是有 <span class="arithmatex">\(k\)</span> 种可能（如：涨、跌、平）。</li>
+<li><strong>公式</strong>：
+    $<span class="arithmatex">\(P(X_1=n_1, \dots, X_k=n_k) = \frac{n!}{n_1! n_2! \dots n_k!} p_1^{n_1} p_2^{n_2} \dots p_k^{n_k}\)</span>$
+    其中 <span class="arithmatex">\(\sum n_i = n, \sum p_i = 1\)</span>。</li>
+</ul>
+<p><strong>2. 多维均匀分布 (Multivariate Uniform)</strong></p>
+<ul>
+<li><strong>概念</strong>：概率密度在某个有界区域 <span class="arithmatex">\(D\)</span> 上是常数（平顶山）。</li>
+<li><strong>PDF</strong>：
+    $<span class="arithmatex">\(f(x_1, \dots, x_n) = \begin{cases} \frac{1}{\text{Volume}(D)}, &amp; (x_1, \dots, x_n) \in D \\ 0, &amp; \text{其他} \end{cases}\)</span>$</li>
+</ul>
+<p><strong>3. 二元正态分布 (Bivariate Normal Distribution) —— 核心考点</strong></p>
+<p>这是现代投资组合理论 (MPT) 的基石。</p>
+<ul>
+<li><strong>表达式</strong>：<span class="arithmatex">\((X, Y) \sim N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)\)</span>。</li>
+<li><strong>五大参数</strong>：<ul>
+<li><span class="arithmatex">\(\mu_1, \mu_2\)</span>：决定中心位置。</li>
+<li><span class="arithmatex">\(\sigma_1, \sigma_2\)</span>：决定各自维度的波动幅度。</li>
+<li><strong><span class="arithmatex">\(\rho\)</span> (相关系数)</strong>：<span class="arithmatex">\(|\rho| &lt; 1\)</span>，决定了两者线性关系的紧密程度。</li>
+</ul>
+</li>
+<li><strong>联合 PDF</strong>：
+    $<span class="arithmatex">\(f(x, y) = \frac{1}{2\pi \sigma_1 \sigma_2 \sqrt{1-\rho^2}} \exp \left\{ -\frac{1}{2(1-\rho^2)} \left[ \frac{(x-\mu_1)^2}{\sigma_1^2} - 2\rho \frac{(x-\mu_1)(y-\mu_2)}{\sigma_1 \sigma_2} + \frac{(y-\mu_2)^2}{\sigma_2^2} \right] \right\}\)</span>$<ul>
+<li><em>注</em>：指数部分是一个<strong>二次型 (Quadratic Form)</strong>，它决定了等高线是椭圆。</li>
+</ul>
+</li>
+</ul>
+<h2 id="32">3.2 边缘分布与随机变量的独立性</h2>
+<p>在上一节我们构建了宏大的联合分布 <span class="arithmatex">\(F(x, y)\)</span>。但在实际工作中，我们经常面临两个具体问题：
+1.  <strong>降维</strong>：我手头有一个由股票 A 和股票 B 组成的投资组合，但我现在只想单独研究股票 A 的风险（边缘分布）。
+2.  <strong>解耦</strong>：这两只股票的涨跌到底有没有关系？如果股票 A 涨了，会影响股票 B 吗？（独立性）。</p>
+<h3 id="321-marginal-cdf">3.2.1 边缘分布函数 (Marginal CDF)</h3>
+<p><strong>1. 定义与直觉</strong>
+当我们有了联合分布函数 <span class="arithmatex">\(F(x, y)\)</span>，想要得到其中一个变量（比如 <span class="arithmatex">\(X\)</span>）的分布，只需要把另一个变量 <span class="arithmatex">\(Y\)</span> 的取值范围“推向极限”即可。这就好比我们在看一个二维表格，只想看“总计”那一栏。</p>
+<p>对于二维随机变量 <span class="arithmatex">\((X, Y)\)</span>，<strong>边缘分布函数</strong>定义为：
+$<span class="arithmatex">\(F_X(x) = P(X \le x) = P(X \le x, Y &lt; +\infty) = \lim_{y \to +\infty} F(x, y)\)</span>$
+同理：
+$<span class="arithmatex">\(F_Y(y) = P(Y \le y) = \lim_{x \to +\infty} F(x, y)\)</span>$</p>
+<p><strong>2. 表达式记法</strong>
+* <span class="arithmatex">\(F_X(x) = F(x, +\infty)\)</span>
+* <span class="arithmatex">\(F_Y(y) = F(+\infty, y)\)</span></p>
+<h3 id="322-marginal-pmf-discrete">3.2.2 边缘分布列 (Marginal PMF - Discrete)</h3>
+<p><strong>1. 定义</strong>
+对于离散型随机变量，边缘分布律就是把联合概率表格中的某一行或某一列<strong>加和</strong>。</p>
+<p><strong>2. 表达式</strong>
+$<span class="arithmatex">\(P(X=x_i) = p_{i\cdot} = \sum_{j} P(X=x_i, Y=y_j) = \sum_{j} p_{ij}\)</span>$
+$<span class="arithmatex">\(P(Y=y_j) = p_{\cdot j} = \sum_{i} P(X=x_i, Y=y_j) = \sum_{i} p_{ij}\)</span>$</p>
+<p><strong>3. 举例：宏观经济与违约率</strong>
+假设宏观经济（<span class="arithmatex">\(X\)</span>）好坏与某债券违约（<span class="arithmatex">\(Y\)</span>）的联合概率如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(X\)</span>(经济) \ <span class="arithmatex">\(Y\)</span>(违约)</th>
+<th style="text-align: left;">违约 (<span class="arithmatex">\(Y=1\)</span>)</th>
+<th style="text-align: left;">不违约 (<span class="arithmatex">\(Y=0\)</span>)</th>
+<th style="text-align: left;"><strong>边缘分布 <span class="arithmatex">\(P(X)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>衰退 (<span class="arithmatex">\(X=0\)</span>)</strong></td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;">0.20</td>
+<td style="text-align: left;"><strong>0.30</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>繁荣 (<span class="arithmatex">\(X=1\)</span>)</strong></td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;"><strong>0.70</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>边缘分布 <span class="arithmatex">\(P(Y)\)</span></strong></td>
+<td style="text-align: left;"><strong>0.15</strong></td>
+<td style="text-align: left;"><strong>0.85</strong></td>
+<td style="text-align: left;"><strong>1.00</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>解读</strong>：<ul>
+<li>无论债券是否违约，经济衰退的总概率是 0.30。</li>
+<li>无论经济如何，该债券违约的总概率是 0.15。</li>
+</ul>
+</li>
+</ul>
+<h3 id="323-marginal-pdf-continuous">3.2.3 边缘密度函数 (Marginal PDF - Continuous)</h3>
+<p>这是考研和面试中<strong>计算题的深坑</strong>。</p>
+<p><strong>1. 定义与表达式</strong>
+对于连续型随机变量，边缘概率密度函数 <span class="arithmatex">\(f_X(x)\)</span> 是将联合密度 <span class="arithmatex">\(f(x, y)\)</span> 关于另一个变量 <span class="arithmatex">\(y\)</span> 在其<strong>全定义域</strong>上积分。</p>
+<div class="arithmatex">\[f_X(x) = \int_{-\infty}^{+\infty} f(x, y) \, dy$$
+$$f_Y(y) = \int_{-\infty}^{+\infty} f(x, y) \, dx\]</div>
+<p><strong>2. 几何意义</strong></p>
+<p>想象一个 3D 的地形图（联合密度曲面）。光线平行于 <span class="arithmatex">\(y\)</span> 轴照射过来，曲面在 <span class="arithmatex">\(xOz\)</span> 平面上的投影（归一化后）就是 <span class="arithmatex">\(f_X(x)\)</span>。这相当于把 <span class="arithmatex">\(y\)</span> 维度的所有概率质量“挤压”到了 <span class="arithmatex">\(x\)</span> 轴上。</p>
+<p><strong>3. 计算陷阱：积分限 (The Integration Limits Trap)</strong>
+在实际题目中，<span class="arithmatex">\(f(x, y)\)</span> 往往不是定义在矩形区域，而是三角形或圆形区域。<strong>定积分上下限是解题的关键。</strong></p>
+<ul>
+<li><strong>经典例题</strong>：设 <span class="arithmatex">\((X, Y)\)</span> 在三角形区域 <span class="arithmatex">\(D = \{(x, y) | 0 &lt; x &lt; 1, 0 &lt; y &lt; x\}\)</span> 上服从均匀分布。求边缘密度 <span class="arithmatex">\(f_X(x)\)</span> 和 <span class="arithmatex">\(f_Y(y)\)</span>。</li>
+<li><strong>解法思路</strong>：<ol>
+<li><strong>画图</strong>：区域是 <span class="arithmatex">\(y=x\)</span> 直线下方、x轴上方、x=1 左侧的三角形。面积为 <span class="arithmatex">\(1/2\)</span>。</li>
+<li><strong>联合密度</strong>：<span class="arithmatex">\(f(x, y) = 2\)</span> （在区域内），0 （其他）。</li>
+<li><strong>求 <span class="arithmatex">\(f_X(x)\)</span></strong>：<ul>
+<li>固定 <span class="arithmatex">\(x\)</span>（画一条垂直线），看 <span class="arithmatex">\(y\)</span> 的范围。</li>
+<li><span class="arithmatex">\(y\)</span> 从 <span class="arithmatex">\(0\)</span> 变到 <span class="arithmatex">\(x\)</span>。</li>
+<li>
+<div class="arithmatex">\[f_X(x) = \int_0^x 2 \, dy = 2y \Big|_0^x = 2x, \quad (0 &lt; x &lt; 1)\]</div>
+</li>
+</ul>
+</li>
+<li><strong>求 <span class="arithmatex">\(f_Y(y)\)</span></strong>：<ul>
+<li>固定 <span class="arithmatex">\(y\)</span>（画一条水平线），看 <span class="arithmatex">\(x\)</span> 的范围。</li>
+<li><span class="arithmatex">\(x\)</span> 从 <span class="arithmatex">\(y\)</span> 变到 <span class="arithmatex">\(1\)</span>（注意不是到 <span class="arithmatex">\(x\)</span>！）。</li>
+<li>
+<div class="arithmatex">\[f_Y(y) = \int_y^1 2 \, dx = 2x \Big|_y^1 = 2(1-y), \quad (0 &lt; y &lt; 1)\]</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="324-independence">3.2.4 随机变量间的独立性 (Independence)</h3>
+<p><strong>1. 定义</strong>
+如果 <span class="arithmatex">\(X\)</span> 的取值情况完全不影响 <span class="arithmatex">\(Y\)</span> 的取值概率，则称 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> <strong>相互独立</strong>。
+* <strong>数学定义</strong>：对于任意实数 <span class="arithmatex">\(x, y\)</span>，都有：
+    $<span class="arithmatex">\(F(x, y) = F_X(x) F_Y(y)\)</span>$</p>
+<p><strong>2. 判定条件 (充要条件)</strong>
+* <strong>离散型</strong>：对于所有 <span class="arithmatex">\(i, j\)</span>，都有 <span class="arithmatex">\(P(X=x_i, Y=y_j) = P(X=x_i) P(Y=y_j)\)</span>。
+* <strong>连续型</strong>：对于几乎所有 <span class="arithmatex">\(x, y\)</span>，都有 <span class="arithmatex">\(f(x, y) = f_X(x) f_Y(y)\)</span>。
+    * <strong>正态分布特例</strong>：对于二元正态分布，<strong>独立 <span class="arithmatex">\(\Leftrightarrow\)</span> 不相关 (<span class="arithmatex">\(\rho = 0\)</span>)</strong>。这是正态分布独有的优美性质，其他分布不一定成立。</p>
+<p><strong>3. 因子分解定理 (Factorization Theorem) —— 快速判定技巧</strong>
+如果联合密度函数可以写成两个函数的乘积：
+$<span class="arithmatex">\(f(x, y) = g(x) h(y)\)</span>$
+并且<strong>定义域必须是矩形区域</strong>（即 <span class="arithmatex">\(a &lt; x &lt; b, c &lt; y &lt; d\)</span>，变量之间在范围上没有约束），那么 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 独立。</p>
+<blockquote>
+<p><strong>⚠️ 陷阱</strong>
+考虑 <span class="arithmatex">\(f(x, y) = 8xy, \quad 0 &lt; x &lt; y &lt; 1\)</span>。
+* <strong>误区</strong>：<span class="arithmatex">\(8xy\)</span> 可以拆成 <span class="arithmatex">\(8x \cdot y\)</span>，所以独立？
+* <strong>正解</strong>：<strong>不独立</strong>！因为定义域 <span class="arithmatex">\(0 &lt; x &lt; y &lt; 1\)</span> 是一个三角形。<span class="arithmatex">\(x\)</span> 的取值限制了 <span class="arithmatex">\(y\)</span> 的取值（例如若 <span class="arithmatex">\(x=0.9\)</span>，则 <span class="arithmatex">\(y\)</span> 只能在 <span class="arithmatex">\(0.9 \sim 1\)</span> 之间）。只要定义域不是矩形（即变量间有耦合约束），一定不独立。</p>
+</blockquote>
+<p><strong>4. 独立随机变量的和 (Convolution)</strong>
+量化中常需要计算两个独立信号叠加后的分布。若 <span class="arithmatex">\(Z = X + Y\)</span>，且 <span class="arithmatex">\(X, Y\)</span> 独立：
+* <strong>卷积公式</strong>：
+    $<span class="arithmatex">\(f_Z(z) = \int_{-\infty}^{+\infty} f_X(x) f_Y(z-x) \, dx\)</span>$
+* <strong>常见可加性</strong>：
+    * <span class="arithmatex">\(X \sim N(\mu_1, \sigma_1^2), Y \sim N(\mu_2, \sigma_2^2) \implies X+Y \sim N(\mu_1+\mu_2, \sigma_1^2+\sigma_2^2)\)</span>
+    * <span class="arithmatex">\(X \sim P(\lambda_1), Y \sim P(\lambda_2) \implies X+Y \sim P(\lambda_1+\lambda_2)\)</span>
+    * <span class="arithmatex">\(X \sim \chi^2(n), Y \sim \chi^2(m) \implies X+Y \sim \chi^2(n+m)\)</span></p>
 
 
 
