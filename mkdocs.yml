@@ -15,8 +15,8 @@ nav:
   - 首页: index.md
   - 概率论:
     - 概率论的基本概念: 01_Probability/01_basic_concepts.md
-    - 随机变量与分布: 01_Probability/02_random_variables.md
-    - 数字特征与矩: 01_Probability/03_numerical_chars.md
+    - 随机变量及其分布: 01_Probability/02_random_variables.md
+    - 多维随机变量及其分布: 01_Probability/03_multi_random_variables.md
     - 独立性专题: 01_Probability/04_independence.md
     - 极限定理与收敛: 01_Probability/05_limit_theorems.md
   - 数理统计:
