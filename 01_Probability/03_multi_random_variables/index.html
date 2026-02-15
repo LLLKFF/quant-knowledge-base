@@ -1,0 +1,1668 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>第二章：随机变量及其分布 (Random Variables & Distributions) - 概率统计学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#random-variables-distributions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="概率统计学习笔记" class="md-header__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            概率统计学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第二章：随机变量及其分布 (Random Variables &amp; Distributions)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01_basic_concepts/" class="md-tabs__link">
+          
+  
+  
+  概率论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_Math_Statistics/01_sampling_dist.md" class="md-tabs__link">
+          
+  
+  
+  数理统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_Regression_Analysis/01_simple_linear.md" class="md-tabs__link">
+          
+  
+  
+  回归分析
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="概率统计学习笔记" class="md-nav__button md-logo" aria-label="概率统计学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    概率统计学习笔记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概率论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_basic_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率论的基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随机变量与分布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_numerical_chars.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数字特征与矩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_independence.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    独立性专题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_limit_theorems.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限定理与收敛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理统计
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数理统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Math_Statistics/01_sampling_dist.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    抽样分布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Math_Statistics/02_point_estimation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数估计(点)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Math_Statistics/03_interval_estimation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数估计(区间)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Math_Statistics/04_evaluation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    估计量评价(UMVUE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Math_Statistics/05_hypothesis_test.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    假设检验理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    回归分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    回归分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Regression_Analysis/01_simple_linear.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简单线性回归
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Regression_Analysis/02_multiple_linear.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多元回归(矩阵)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Regression_Analysis/03_diagnostics.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型诊断(违背假设)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Regression_Analysis/04_endogeneity.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内生性与GMM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言：为什么要引入随机变量？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 随机变量的基本概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 随机变量的基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-definition-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 随机变量的定义 (Definition of Random Variables)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-cumulative-distribution-function-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 随机变量的分布函数 (Cumulative Distribution Function, CDF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 随机变量的类型与常见分布
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 随机变量的类型与常见分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-discrete-rvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 离散型随机变量及其分布律 (Discrete RVs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-continuous-rvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 连续型随机变量及其概率密度函数 (Continuous RVs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 随机变量的数字特征
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 随机变量的数字特征">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-mathematical-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 数学期望 (Mathematical Expectation)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3.1 数学期望 (Mathematical Expectation)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 概念起源：分赌本问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 定义与物理意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-variance-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 方差与标准差 (Variance &amp; Standard Deviation)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3.2 方差与标准差 (Variance &amp; Standard Deviation)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 定义与公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 物理与现实意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-chebyshevs-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 切比雪夫不等式 (Chebyshev's Inequality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 协方差、相关系数与矩
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3.3 协方差、相关系数与矩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 协方差 (Covariance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-correlation-coefficient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 相关系数 (Correlation Coefficient)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-moments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 矩 (Moments)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.4 其他特征：偏度、峰度与分位数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#235" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.5 常见随机变量的期望与方差汇总
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="random-variables-distributions">第二章：随机变量及其分布 (Random Variables &amp; Distributions)</h1>
+<h2 id="_1">前言：为什么要引入随机变量？</h2>
+<p>在第一章中，我们处理的样本空间 <span class="arithmatex">\(\Omega\)</span> 往往是具体的、非数值的。比如：
+* 扔硬币：<span class="arithmatex">\(\Omega = \{ \text{Head}, \text{Tail} \}\)</span>
+* 抽扑克：<span class="arithmatex">\(\Omega = \{ \heartsuit, \spadesuit, \clubsuit, \diamondsuit \}\)</span>
+* 检验产品：<span class="arithmatex">\(\Omega = \{ \text{合格}, \text{次品} \}\)</span></p>
+<p>虽然我们可以计算这些事件的概率，但无法进行更高级的数学运算。我们没法计算“<span class="arithmatex">\(\text{Head} + \text{Tail}\)</span>”是多少，也没法对“<span class="arithmatex">\(\heartsuit\)</span>”求导数。</p>
+<p>为了使用微积分、线性代数等强大的数学工具，我们需要建立一座桥梁，将抽象的样本点映射为实数。<strong>随机变量 (Random Variable)</strong> 就是这座桥梁。它让我们从研究“事件”转变为研究“函数”和“分布”。</p>
+<p>本章我们将重点讨论<strong>一维随机变量</strong>及其分布规律。</p>
+<h2 id="21">2.1 随机变量的基本概念</h2>
+<h3 id="211-definition-of-random-variables">2.1.1 随机变量的定义 (Definition of Random Variables)</h3>
+<p><strong>1. 什么是随机变量？</strong>
+直观地说，随机变量就是一个“翻译官”。它把随机试验的每一个结果（样本点）都翻译成一个唯一的实数。</p>
+<ul>
+<li><strong>文字描述</strong>：随机变量是定义在样本空间 <span class="arithmatex">\(\Omega\)</span> 上，取值于实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 的一个函数。</li>
+<li><strong>符号描述</strong>：设 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 是一个概率空间。随机变量 <span class="arithmatex">\(X\)</span> 是一个映射：
+    $<span class="arithmatex">\(X: \Omega \to \mathbb{R}\)</span>$
+    对于每一个样本点 <span class="arithmatex">\(\omega \in \Omega\)</span>，都有唯一的实数 <span class="arithmatex">\(X(\omega)\)</span> 与之对应。</li>
+</ul>
+<blockquote>
+<p><strong>⚠️ 考点：可测性 (Measurability)</strong>
+并不是任意一个函数都能叫随机变量。在测度论中，随机变量必须是 <strong><span class="arithmatex">\(\mathcal{F}\)</span>-可测函数</strong>。
+<strong>定义</strong>：对于实数轴上的任意博雷尔集 (Borel Set) <span class="arithmatex">\(B \in \mathcal{B}(\mathbb{R})\)</span>，其原像必须属于事件域 <span class="arithmatex">\(\mathcal{F}\)</span>：
+$<span class="arithmatex">\(X^{-1}(B) = \{ \omega \in \Omega : X(\omega) \in B \} \in \mathcal{F}\)</span>$
+<em>解释</em>：这意味着我们关心的数值范围（比如 <span class="arithmatex">\(X &gt; 5\)</span>），必须对应一个我们<strong>能算出概率的合法事件</strong>。如果 <span class="arithmatex">\(X\)</span> 映射出的结果对应的原事件不在 <span class="arithmatex">\(\mathcal{F}\)</span> 里，那概率 <span class="arithmatex">\(P(X&gt;5)\)</span> 就无法定义，<span class="arithmatex">\(X\)</span> 也就不是随机变量。</p>
+</blockquote>
+<p><strong>2. 常见的随机变量</strong>
+* <strong>扔硬币</strong>：
+    * <span class="arithmatex">\(\Omega = \{ \text{正面 (H)}, \text{反面 (T)} \}\)</span>
+    * 定义 <span class="arithmatex">\(X\)</span>：<span class="arithmatex">\(X(H) = 1, X(T) = 0\)</span>。
+    * 此时 <span class="arithmatex">\(P(X=1) = P(\{H\}) = 0.5\)</span>。
+* <strong>掷骰子</strong>：
+    * <span class="arithmatex">\(\Omega = \{ \omega_1, \omega_2, \dots, \omega_6 \}\)</span>，其中 <span class="arithmatex">\(\omega_i\)</span> 表示点数为 <span class="arithmatex">\(i\)</span> 的面。
+    * 定义 <span class="arithmatex">\(X\)</span>：<span class="arithmatex">\(X(\omega_i) = i\)</span>。
+    * 事件“点数大于 4”可以表示为 <span class="arithmatex">\(X &gt; 4\)</span>，对应原事件 <span class="arithmatex">\(\{ \omega_5, \omega_6 \}\)</span>。</p>
+<p><strong>3. 随机变量的分类</strong>
+根据取值情况的不同，随机变量主要分为两类（在高等概率论中还有第三类）：</p>
+<ol>
+<li><strong>离散型 (Discrete RV)</strong>：<ul>
+<li>取值是有限个或可列无限个（如 <span class="arithmatex">\(0, 1, 2, \dots\)</span>）。</li>
+<li><em>例子</em>：二项分布、泊松分布、几何分布。</li>
+</ul>
+</li>
+<li><strong>连续型 (Continuous RV)</strong>：<ul>
+<li>取值充满整个区间（如 <span class="arithmatex">\([0, 1]\)</span> 或 <span class="arithmatex">\((-\infty, +\infty)\)</span>），且任意单点的概率为 0。</li>
+<li><em>例子</em>：正态分布、指数分布、均匀分布。</li>
+</ul>
+</li>
+<li><strong>混合型/奇异型 (Mixed/Singular RV)</strong>：<ul>
+<li>既不是纯离散也不是纯连续，或者存在奇异部分（如康托尔分布）。</li>
+<li><em>例子</em>：带跳跃的资产价格模型（Jump-Diffusion Model）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="212-cumulative-distribution-function-cdf">2.1.2 随机变量的分布函数 (Cumulative Distribution Function, CDF)</h3>
+<p>对于任何随机变量（无论是离散还是连续），我们都需要一个统一的工具来描述它的概率规律。这个工具就是<strong>分布函数</strong>。</p>
+<p><strong>1. 定义与概念</strong>
+设 <span class="arithmatex">\(X\)</span> 是一个随机变量，<span class="arithmatex">\(x\)</span> 是任意实数。函数
+$<span class="arithmatex">\(F(x) = P(X \le x) = P(\{ \omega \in \Omega : X(\omega) \le x \})\)</span>$
+称为 <span class="arithmatex">\(X\)</span> 的<strong>累积分布函数</strong> (Cumulative Distribution Function)，简称 <strong>CDF</strong> 或分布函数。</p>
+<ul>
+<li><strong>几何意义</strong>：<span class="arithmatex">\(F(x)\)</span> 描述了概率在实数轴上从左到右的“累积”过程。它是概率质量的扫描仪。</li>
+</ul>
+<p><strong>2. 表现形式</strong>
+* <strong>离散型</strong>：呈阶梯状（Step Function）。在可能取值点处发生跳跃，跳跃高度等于该点的概率。
+* <strong>连续型</strong>：呈连续曲线状。光滑平缓，没有跳跃。</p>
+<p><strong>3. 重要性质 (Properties) —— 笔试必考</strong>
+一个函数 <span class="arithmatex">\(F(x)\)</span> 要成为合法的分布函数，必须满足以下三条性质：</p>
+<ol>
+<li>
+<p><strong>单调非减性 (Monotonically Non-decreasing)</strong>：
+    若 <span class="arithmatex">\(x_1 &lt; x_2\)</span>，则 <span class="arithmatex">\(F(x_1) \le F(x_2)\)</span>。</p>
+<ul>
+<li><em>解释</em>：随着 <span class="arithmatex">\(x\)</span> 增大，包含的范围越来越大，累积的概率自然只增不减。</li>
+</ul>
+</li>
+<li>
+<p><strong>规范性 (Normalization / Boundedness)</strong>：
+    $<span class="arithmatex">\(\lim_{x \to -\infty} F(x) = 0, \quad \lim_{x \to +\infty} F(x) = 1\)</span>$</p>
+<ul>
+<li><em>解释</em>：不可能有数值比 <span class="arithmatex">\(-\infty\)</span> 还小，所有数值一定都比 <span class="arithmatex">\(+\infty\)</span> 小。</li>
+</ul>
+</li>
+<li>
+<p><strong>右连续性 (Right Continuity)</strong>：
+    $<span class="arithmatex">\(\lim_{x \to x^+} F(x) = F(x)\)</span>$</p>
+<ul>
+<li><em>解释</em>：这取决于定义中的“小于等于 (<span class="arithmatex">\(\le\)</span>)”。</li>
+<li><em>反例</em>：如果我们定义 <span class="arithmatex">\(F(x) = P(X &lt; x)\)</span>，那它就是左连续的。但在主流数学体系（包括柯尔莫哥洛夫体系）中，标准定义是右连续。</li>
+</ul>
+</li>
+</ol>
+<p><strong>4. 公式与概率的对应关系</strong>
+通过 CDF，我们可以计算任意区间的概率：
+* <span class="arithmatex">\(P(a &lt; X \le b) = F(b) - F(a)\)</span>
+* <span class="arithmatex">\(P(X &gt; a) = 1 - F(a)\)</span>
+* <span class="arithmatex">\(P(X = a) = F(a) - F(a^-)\)</span> （即 <span class="arithmatex">\(a\)</span> 处的跳跃高度）
+    * <em>注</em>：对于连续型随机变量，没有跳跃，所以 <span class="arithmatex">\(P(X=a) = 0\)</span>。</p>
+<h2 id="22">2.2 随机变量的类型与常见分布</h2>
+<p>在量化研究中，我们遇到的变量主要分为两类：一类是跳跃的（比如每天的交易次数、涨跌停家数），对应离散型；另一类是连续波动的（比如股价收益率、期权隐含波动率），对应连续型。</p>
+<h3 id="221-discrete-rvs">2.2.1 离散型随机变量及其分布律 (Discrete RVs)</h3>
+<p><strong>1. 分布律 (Probability Mass Function, PMF)</strong>
+对于离散型随机变量 <span class="arithmatex">\(X\)</span>，它所有可能的取值为 <span class="arithmatex">\(x_1, x_2, \dots\)</span>。我们需要知道取每一个值的概率是多少。
+定义分布律为：
+$<span class="arithmatex">\(P(X=x_k) = p_k, \quad k=1, 2, \dots\)</span>$</p>
+<ul>
+<li>
+<p><strong>表现形式</strong>：</p>
+<ul>
+<li><strong>表格法</strong>：最直观，考试常考。
+    | <span class="arithmatex">\(X\)</span> | <span class="arithmatex">\(x_1\)</span> | <span class="arithmatex">\(x_2\)</span> | <span class="arithmatex">\(\dots\)</span> | <span class="arithmatex">\(x_n\)</span> |
+    | :--- | :--- | :--- | :--- | :--- |
+    | <span class="arithmatex">\(P\)</span> | <span class="arithmatex">\(p_1\)</span> | <span class="arithmatex">\(p_2\)</span> | <span class="arithmatex">\(\dots\)</span> | <span class="arithmatex">\(p_n\)</span> |</li>
+<li><strong>矩阵/向量法</strong>：在 Python 编程中，我们通常用向量 <code>[p1, p2, ...]</code> 来表示。</li>
+</ul>
+</li>
+<li>
+<p><strong>基本性质 (必背)</strong>：</p>
+<ol>
+<li><strong>非负性</strong>：<span class="arithmatex">\(p_k \ge 0\)</span>。</li>
+<li><strong>规范性</strong>：<span class="arithmatex">\(\sum_{k=1}^{\infty} p_k = 1\)</span>。</li>
+</ol>
+</li>
+</ul>
+<p><strong>2. 常见离散分布</strong></p>
+<p><strong>(1) 0-1 分布 (Bernoulli Distribution)</strong>
+* <strong>定义</strong>：试验只有两个结果（成功/失败）。记为 <span class="arithmatex">\(X \sim B(1, p)\)</span>。
+* <strong>分布律</strong>：<span class="arithmatex">\(P(X=1)=p, \quad P(X=0)=1-p\)</span>。
+* <strong>量化含义</strong>：单次交易是盈利还是亏损；期权是否行权。</p>
+<p><strong>(2) 二项分布 (Binomial Distribution)</strong>
+* <strong>定义</strong>：<span class="arithmatex">\(n\)</span> 重伯努利试验中成功的次数。记为 <span class="arithmatex">\(X \sim B(n, p)\)</span>。
+* <strong>分布律</strong>：
+    $<span class="arithmatex">\(P(X=k) = C_n^k p^k (1-p)^{n-k}, \quad k=0, 1, \dots, n\)</span>$
+* <strong>性质</strong>：<span class="arithmatex">\(E[X] = np, \quad Var(X) = np(1-p)\)</span>。
+* <strong>量化含义</strong>：假设策略胜率为 55%，做 100 次交易，盈利次数的分布。</p>
+<p><strong>(3) 泊松分布 (Poisson Distribution)</strong>
+这是金融工程中极其重要的分布，用于描述<strong>“稀有事件”</strong>。
+* <strong>定义</strong>：记为 <span class="arithmatex">\(X \sim P(\lambda)\)</span> 或 <span class="arithmatex">\(\pi(\lambda)\)</span>。
+* <strong>分布律</strong>：
+    $<span class="arithmatex">\(P(X=k) = \frac{\lambda^k}{k!} e^{-\lambda}, \quad k=0, 1, 2, \dots\)</span>$
+* <strong>参数含义</strong>：<span class="arithmatex">\(\lambda\)</span> 代表单位时间内事件发生的<strong>平均次数</strong>（强度）。
+* <strong>泊松定理 (Poisson Limit Theorem)</strong>：
+    当 <span class="arithmatex">\(n \to \infty, p \to 0\)</span> 且 <span class="arithmatex">\(np = \lambda\)</span> 保持不变时，二项分布收敛于泊松分布：
+    $<span class="arithmatex">\(\lim_{n \to \infty} C_n^k p^k (1-p)^{n-k} = \frac{\lambda^k}{k!} e^{-\lambda}\)</span>$
+    * <em>直觉</em>：如果你每秒钟都在做高频交易（<span class="arithmatex">\(n\)</span> 很大），但每次成交概率很低（<span class="arithmatex">\(p\)</span> 很小），那么你一分钟内的成交次数就服从泊松分布。
+* <strong>跳跃过程</strong>：在 Merton 跳跃扩散模型 (Jump Diffusion) 中，资产价格发生跳跃的次数通常假设服从泊松分布。</p>
+<p><strong>(4) 超几何分布 (Hypergeometric Distribution)</strong>
+* <strong>定义</strong>：<span class="arithmatex">\(N\)</span> 件产品中有 <span class="arithmatex">\(M\)</span> 件次品，<strong>不放回</strong>地抽取 <span class="arithmatex">\(n\)</span> 件，其中次品数 <span class="arithmatex">\(X\)</span> 的分布。记为 <span class="arithmatex">\(X \sim H(n, M, N)\)</span>。
+* <strong>分布律</strong>：
+    $<span class="arithmatex">\(P(X=k) = \frac{C_M^k C_{N-M}^{n-k}}{C_N^n}\)</span>$
+* <strong>区别</strong>：如果是有放回抽样，就是二项分布。当总体 <span class="arithmatex">\(N\)</span> 很大时，超几何分布近似于二项分布（因为拿走一个对总体影响微乎其微）。</p>
+<h3 id="222-continuous-rvs">2.2.2 连续型随机变量及其概率密度函数 (Continuous RVs)</h3>
+<p><strong>1. 概率密度函数 (PDF)</strong>
+对于连续型变量，单点概率 <span class="arithmatex">\(P(X=x)=0\)</span>，所以我们要讨论“概率的密度”。
+如果存在非负函数 <span class="arithmatex">\(f(x)\)</span>，使得对于任意区间 <span class="arithmatex">\([a, b]\)</span>：
+$<span class="arithmatex">\(P(a &lt; X \le b) = \int_a^b f(x) dx\)</span>$
+则称 <span class="arithmatex">\(X\)</span> 为连续型随机变量，<span class="arithmatex">\(f(x)\)</span> 为<strong>概率密度函数</strong>。</p>
+<ul>
+<li><strong>分布函数与 PDF 的关系</strong>：
+    $<span class="arithmatex">\(F(x) = \int_{-\infty}^x f(t) dt, \quad f(x) = F'(x)\)</span>$</li>
+<li><strong>几何意义</strong>：<ul>
+<li><span class="arithmatex">\(f(x)\)</span> 是曲线的高度。</li>
+<li>概率 <span class="arithmatex">\(P\)</span> 是曲线下方的<strong>面积</strong>。</li>
+<li><span class="arithmatex">\(F(x)\)</span> 是从左无穷远积分别到 <span class="arithmatex">\(x\)</span> 的累积面积。</li>
+</ul>
+</li>
+<li><strong>基本性质 (必背)</strong>：<ol>
+<li><span class="arithmatex">\(f(x) \ge 0\)</span> （注意：<span class="arithmatex">\(f(x)\)</span> 可以大于 1，只要积分是 1 即可）。</li>
+<li><span class="arithmatex">\(\int_{-\infty}^{+\infty} f(x) dx = 1\)</span> （总面积为 1）。</li>
+</ol>
+</li>
+</ul>
+<p><strong>2. 常见连续分布</strong></p>
+<p><strong>(1) 均匀分布 (Uniform Distribution)</strong>
+* <strong>定义</strong>：在区间 <span class="arithmatex">\([a, b]\)</span> 上“等可能”出现。记为 <span class="arithmatex">\(X \sim U(a, b)\)</span>。
+* <strong>PDF</strong>：
+    $<span class="arithmatex">\(f(x) = \begin{cases} \frac{1}{b-a}, &amp; a &lt; x &lt; b \\ 0, &amp; \text{其他} \end{cases}\)</span>$
+* <strong>量化含义</strong>：
+    * 这是蒙特卡洛模拟 (Monte Carlo) 的基石。计算机生成的随机数 <code>rand()</code> 本质上就是 <span class="arithmatex">\(U(0, 1)\)</span>。
+    * 在贝叶斯统计中，如果我们对参数一无所知，通常假设先验分布为均匀分布（无信息的先验）。</p>
+<p><strong>(2) 指数分布 (Exponential Distribution)</strong>
+* <strong>定义</strong>：常用于描述“寿命”或“等待时间”。记为 <span class="arithmatex">\(X \sim E(\lambda)\)</span>。
+* <strong>PDF</strong>：
+    $<span class="arithmatex">\(f(x) = \begin{cases} \lambda e^{-\lambda x}, &amp; x &gt; 0 \\ 0, &amp; x \le 0 \end{cases}\)</span>$
+* <strong>重要性质：无记忆性 (Memorylessness)</strong>
+    $<span class="arithmatex">\(P(X &gt; s+t | X &gt; s) = P(X &gt; t)\)</span>$
+    * <em>解释</em>：如果一个灯泡已经亮了 <span class="arithmatex">\(s\)</span> 小时没坏，它再亮 <span class="arithmatex">\(t\)</span> 小时的概率，和它是一个新灯泡时能亮 <span class="arithmatex">\(t\)</span> 小时的概率是一样的。它“忘记”了自己已经工作了多久。
+* <strong>与泊松分布的关系 (高频考点)</strong>：
+    如果某事件发生的次数服从参数为 <span class="arithmatex">\(\lambda\)</span> 的泊松分布（泊松流），那么<strong>相邻两次事件发生的时间间隔</strong>服从参数为 <span class="arithmatex">\(\lambda\)</span> 的指数分布。
+    * <em>泊松分布</em>：数数（离散）。
+    * <em>指数分布</em>：量时间（连续）。</p>
+<p><strong>(3) 正态分布 (Normal / Gaussian Distribution)</strong>
+这是概率论的“皇帝”，中心极限定理 (CLT) 的归宿。
+* <strong>定义</strong>：记为 <span class="arithmatex">\(X \sim N(\mu, \sigma^2)\)</span>。
+* <strong>PDF (必须能默写)</strong>：
+    $<span class="arithmatex">\(f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}, \quad -\infty &lt; x &lt; +\infty\)</span>$
+* <strong>参数</strong>：<span class="arithmatex">\(\mu\)</span> 决定位置（对称轴），<span class="arithmatex">\(\sigma\)</span> 决定形状（胖瘦）。
+* <strong>标准正态分布 <span class="arithmatex">\(N(0, 1)\)</span></strong>：
+    令 <span class="arithmatex">\(Z = \frac{X-\mu}{\sigma}\)</span>，则 <span class="arithmatex">\(Z \sim N(0, 1)\)</span>。其 PDF 记为 <span class="arithmatex">\(\phi(x)\)</span>，CDF 记为 <span class="arithmatex">\(\Phi(x)\)</span>。
+* <strong>3<span class="arithmatex">\(\sigma\)</span> 原则</strong>：
+    * <span class="arithmatex">\(P(|X-\mu| &lt; \sigma) \approx 68.26\%\)</span>
+    * <span class="arithmatex">\(P(|X-\mu| &lt; 2\sigma) \approx 95.44\%\)</span>
+    * <span class="arithmatex">\(P(|X-\mu| &lt; 3\sigma) \approx 99.73\%\)</span>
+    * <em>量化应用</em>：在布林带 (Bollinger Bands) 策略中，我们通常把上下轨设为 2 倍标准差，意味着股价有 95% 的概率在这个通道内运行。突破通道通常意味着异常或趋势反转。</p>
+<h2 id="23">2.3 随机变量的数字特征</h2>
+<p>如果说分布函数 <span class="arithmatex">\(F(x)\)</span> 是随机变量的“全身照”，那么数字特征就是它的“体检报告”。在量化交易中，我们往往不需要知道股价每一秒的分布细节，只需要抓住<strong>期望（预期收益）</strong>和<strong>方差（风险）</strong>这两个核心指标，就足以构建马科维茨（Markowitz）投资组合模型了。</p>
+<h3 id="231-mathematical-expectation">2.3.1 数学期望 (Mathematical Expectation)</h3>
+<h4 id="1">1. 概念起源：分赌本问题</h4>
+<p>期望的概念最早源于帕斯卡和费马对“分赌本问题”的讨论。
+* <strong>场景</strong>：甲乙两人赌硬币，先赢 3 局者拿走全部 100 元。当前甲赢了 2 局，乙赢了 1 局，赌局因故中断。钱该怎么分？
+* <strong>直觉</strong>：甲赢面大，应该多拿。
+* <strong>期望解法</strong>：如果继续赌，甲赢的概率是 <span class="arithmatex">\(0.5 + 0.5 \times 0.5 = 0.75\)</span>（下一局直接赢，或下一局输但下下局赢）。乙赢的概率是 <span class="arithmatex">\(0.25\)</span>。
+* <strong>结论</strong>：公平的分配方式不是看“现在谁赢得多”，而是看“未来预期的潜在收益”。甲应得 <span class="arithmatex">\(100 \times 0.75 = 75\)</span> 元。这就是<strong>数学期望</strong>的雏形——<strong>对未来的加权预测</strong>。</p>
+<h4 id="2">2. 定义与物理意义</h4>
+<ul>
+<li>
+<p><strong>定义</strong>：</p>
+<ul>
+<li><strong>离散型</strong>：<span class="arithmatex">\(E[X] = \sum_{k} x_k p_k\)</span>（要求级数绝对收敛）。</li>
+<li><strong>连续型</strong>：<span class="arithmatex">\(E[X] = \int_{-\infty}^{+\infty} x f(x) dx\)</span>（要求积分绝对收敛）。</li>
+</ul>
+<blockquote>
+<p><strong>💡 测度论视角 (Lebesgue Integral)</strong>
+在高等概率论中，期望本质上是随机变量 <span class="arithmatex">\(X\)</span> 关于概率测度 <span class="arithmatex">\(P\)</span> 的<strong>勒贝格积分</strong>：
+$<span class="arithmatex">\(E[X] = \int_{\Omega} X(\omega) dP(\omega)\)</span>$
+这种定义方式统一了离散和连续，并且能够处理更复杂的“混合分布”（比如带有跳跃的资产价格）。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>物理意义</strong>：期望是随机变量分布的<strong>“重心”</strong>。如果你把概率密度看作质量分布，支撑点就在 <span class="arithmatex">\(E[X]\)</span> 处。</p>
+</li>
+<li>
+<p><strong>现实案例</strong>：</p>
+<ul>
+<li><strong>彩票</strong>：一张 2 元的彩票，中奖概率极低，计算下来的数学期望通常只有 0.8 元左右。这意味着长期买彩票的人，每买一张就在亏损 1.2 元（智商税）。</li>
+<li><strong>交易系统</strong>：一个胜率 40% 的策略，如果盈亏比是 3:1，那么它的单笔期望收益是正的（<span class="arithmatex">\(0.4 \times 3 - 0.6 \times 1 = 0.6\)</span>）。<strong>做交易是做期望，而不是做胜率。</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="3">3. 重要性质</h4>
+<ol>
+<li><strong>线性性 (Linearity)</strong>：<span class="arithmatex">\(E[aX + bY + c] = aE[X] + bE[Y] + c\)</span>。<ul>
+<li><em>注意</em>：<strong>不需要</strong> <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 独立。这是构建投资组合理论的基石——组合的预期收益等于各资产预期收益的加权平均。</li>
+</ul>
+</li>
+<li><strong>随机变量函数的期望 (LOTUS)</strong>：
+    求 <span class="arithmatex">\(Y = g(X)\)</span> 的期望，<strong>不需要</strong>先求出 <span class="arithmatex">\(Y\)</span> 的分布 <span class="arithmatex">\(f_Y(y)\)</span>，直接用 <span class="arithmatex">\(X\)</span> 的分布算：
+    $<span class="arithmatex">\(E[g(X)] = \int_{-\infty}^{+\infty} g(x) f(x) dx\)</span>$
+    这被称为<strong>无意识统计学家定律 (Law of the Unconscious Statistician)</strong>。</li>
+</ol>
+<h3 id="232-variance-standard-deviation">2.3.2 方差与标准差 (Variance &amp; Standard Deviation)</h3>
+<h4 id="1_1">1. 定义与公式</h4>
+<ul>
+<li><strong>定义</strong>：方差衡量随机变量偏离其中心的程度。
+    $<span class="arithmatex">\(Var(X) = E[(X - E[X])^2]\)</span>$</li>
+<li><strong>计算公式</strong>：实际计算中常用：
+    $<span class="arithmatex">\(Var(X) = E[X^2] - (E[X])^2\)</span>$</li>
+<li><strong>标准差</strong>：<span class="arithmatex">\(\sigma = \sqrt{Var(X)}\)</span>。在金融中，它直接对应<strong>波动率 (Volatility)</strong>。</li>
+</ul>
+<h4 id="2_1">2. 物理与现实意义</h4>
+<ul>
+<li><strong>物理意义</strong>：转动惯量。分布越分散，转动惯量越大。</li>
+<li><strong>现实案例</strong>：银行理财产品的风险等级（R1-R5），本质上就是根据其历史收益率的标准差来划分的。标准差越大，可能亏损的幅度也越大。</li>
+</ul>
+<h4 id="3_1">3. 重要性质</h4>
+<ol>
+<li><strong>平移不变性</strong>：<span class="arithmatex">\(Var(X + c) = Var(X)\)</span>。加一个常数不改变波动。</li>
+<li><strong>缩放性</strong>：<span class="arithmatex">\(Var(cX) = c^2 Var(X)\)</span>。杠杆加倍，方差变成 4 倍。</li>
+<li><strong>和的方差</strong>：
+    $<span class="arithmatex">\(Var(X \pm Y) = Var(X) + Var(Y) \pm 2Cov(X, Y)\)</span>$<ul>
+<li><em>特别注意</em>：只有当 <span class="arithmatex">\(X, Y\)</span> <strong>不相关</strong>（即 <span class="arithmatex">\(Cov=0\)</span>）时，才有 <span class="arithmatex">\(Var(X+Y) = Var(X) + Var(Y)\)</span>。这是分散化投资能降低风险的数学原理。</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-chebyshevs-inequality">4. 切比雪夫不等式 (Chebyshev's Inequality)</h4>
+<p>这是一个不需要知道具体分布就能估算尾部风险的神器。</p>
+<ul>
+<li><strong>定理</strong>：对于任意随机变量 <span class="arithmatex">\(X\)</span> (只要方差存在)，对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：
+    $<span class="arithmatex">\(P(|X - \mu| \ge \epsilon) \le \frac{\sigma^2}{\epsilon^2}\)</span>$</li>
+<li><strong>证明思路 (Proof Sketch)</strong>：
+    利用马尔可夫不等式或直接放大积分区域。
+    $$
+    \sigma^2 = \int_{-\infty}^{+\infty} (x-\mu)^2 f(x) dx \ge \int_{|x-\mu| \ge \epsilon} (x-\mu)^2 f(x) dx
+    $$
+    在积分区域 <span class="arithmatex">\(|x-\mu| \ge \epsilon\)</span> 内，<span class="arithmatex">\((x-\mu)^2 \ge \epsilon^2\)</span>，所以：
+    $$
+    \sigma^2 \ge \epsilon^2 \int_{|x-\mu| \ge \epsilon} f(x) dx = \epsilon^2 P(|X-\mu| \ge \epsilon)
+    $$
+    移项即得证。</li>
+<li><strong>意义</strong>：哪怕不知道黑天鹅长什么样，只要知道波动率，就能给极端风险画一条“上限线”。</li>
+</ul>
+<h3 id="233">2.3.3 协方差、相关系数与矩</h3>
+<h4 id="1-covariance">1. 协方差 (Covariance)</h4>
+<ul>
+<li><strong>定义</strong>：衡量两个变量“同向变动”的程度。
+    $<span class="arithmatex">\(Cov(X, Y) = E[(X-\mu_x)(Y-\mu_y)] = E[XY] - E[X]E[Y]\)</span>$</li>
+<li><strong>协方差矩阵</strong>：对于 <span class="arithmatex">\(n\)</span> 维随机变量 <span class="arithmatex">\(\mathbf{X} = (X_1, \dots, X_n)^T\)</span>，其协方差矩阵 <span class="arithmatex">\(\Sigma\)</span> 是一个对称半正定矩阵，第 <span class="arithmatex">\((i, j)\)</span> 个元素是 <span class="arithmatex">\(Cov(X_i, X_j)\)</span>。</li>
+</ul>
+<h4 id="2-correlation-coefficient">2. 相关系数 (Correlation Coefficient)</h4>
+<ul>
+<li><strong>定义</strong>：标准化的协方差，消除了量纲影响。
+    $<span class="arithmatex">\(\rho_{XY} = \frac{Cov(X, Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\)</span>$</li>
+<li><strong>性质定理</strong>：<span class="arithmatex">\(|\rho_{XY}| \le 1\)</span>。<ul>
+<li><strong>证明 (柯西-施瓦茨不等式的概率版)</strong>：
+    构造一个关于 <span class="arithmatex">\(t\)</span> 的二次函数：
+    $<span class="arithmatex">\(g(t) = E[(t(X-\mu_x) + (Y-\mu_y))^2] \ge 0\)</span>$
+    展开后得到一个关于 <span class="arithmatex">\(t\)</span> 的一元二次方程 <span class="arithmatex">\(At^2 + Bt + C \ge 0\)</span>。
+    因为恒非负，所以判别式 <span class="arithmatex">\(\Delta = B^2 - 4AC \le 0\)</span>。
+    代入系数即可推出 <span class="arithmatex">\((Cov)^2 \le Var(X)Var(Y)\)</span>，开方即得 <span class="arithmatex">\(|\rho| \le 1\)</span>。 <span class="arithmatex">\(\blacksquare\)</span></li>
+</ul>
+</li>
+</ul>
+<h4 id="3-moments">3. 矩 (Moments)</h4>
+<ul>
+<li><strong>原点矩</strong>：<span class="arithmatex">\(E[X^k]\)</span>。一阶原点矩就是期望。</li>
+<li><strong>中心矩</strong>：<span class="arithmatex">\(E[(X-\mu)^k]\)</span>。二阶中心矩就是方差。</li>
+</ul>
+<hr />
+<h3 id="234">2.3.4 其他特征：偏度、峰度与分位数</h3>
+<p>金融市场是非正态的，主要体现在<strong>偏</strong>和<strong>尖</strong>。</p>
+<ol>
+<li><strong>偏度 (Skewness)</strong>：三阶标准化中心矩。<ul>
+<li><span class="arithmatex">\(S &lt; 0\)</span>（左偏）：长尾在左边。<strong>金融资产收益率通常是左偏的</strong>（涨得慢，跌得快/深）。</li>
+</ul>
+</li>
+<li><strong>峰度 (Kurtosis)</strong>：四阶标准化中心矩。<ul>
+<li><span class="arithmatex">\(K &gt; 3\)</span>（尖峰肥尾）：极端值出现的概率比正态分布大得多。这是<strong>黑天鹅</strong>的数学栖息地。</li>
+</ul>
+</li>
+<li><strong>变异系数 (CV)</strong>：<span class="arithmatex">\(CV = \sigma / \mu\)</span>。衡量单位收益的风险，用于比较量纲不同的资产。</li>
+<li><strong>分位数 (Quantile)</strong>：<span class="arithmatex">\(x_\alpha\)</span> 满足 <span class="arithmatex">\(P(X \le x_\alpha) = \alpha\)</span>。<ul>
+<li><strong>中位数</strong>：<span class="arithmatex">\(\alpha = 0.5\)</span>。</li>
+<li><strong>VaR (Value at Risk)</strong>：风险价值本质上就是收益率分布的 <span class="arithmatex">\(\alpha\)</span> 分位数（如 5% 分位点）。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="235">2.3.5 常见随机变量的期望与方差汇总</h3>
+<p>这是一张必须印在脑子里的表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分布</th>
+<th style="text-align: left;">记号</th>
+<th style="text-align: left;">期望 <span class="arithmatex">\(E[X]\)</span></th>
+<th style="text-align: left;">方差 <span class="arithmatex">\(Var(X)\)</span></th>
+<th style="text-align: left;">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>0-1分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(B(1, p)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(p\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(p(1-p)\)</span></td>
+<td style="text-align: left;">伯努利试验基础</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>二项分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(B(n, p)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(np\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(np(1-p)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(n\)</span> 次独立伯努利</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>泊松分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(P(\lambda)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: left;"><strong>期望等于方差</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>均匀分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(U(a, b)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{a+b}{2}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{(b-a)^2}{12}\)</span></td>
+<td style="text-align: left;">12这个分母常考</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>指数分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(E(\lambda)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda^2}\)</span></td>
+<td style="text-align: left;">均值越小，衰减越快</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>正态分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(N(\mu, \sigma^2)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\mu\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\sigma^2\)</span></td>
+<td style="text-align: left;">参数即特征</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
